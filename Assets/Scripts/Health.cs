@@ -8,6 +8,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     //[SerializeField] private int health = 1;
+    public int maxHealth = 20;
     public int health = 1;
 
     enum effectType { Immune, Normal, Vulnerable };
@@ -24,13 +25,18 @@ public class Health : MonoBehaviour
     [SerializeField] private int timeToSlowIfIced = 3;
     [SerializeField] private int timeToStopIfSticky = 3;
 
+    [SerializeField] private bool deathHandledByBehaviorTree = false;
+
     public FirstPersonController firstPersonController = null;
     public EnemyBase enemyBase = null;
+
+    private float deathDelay = 0.25f;
 
     private void Start()
     {
         enemyBase = GetComponent<EnemyBase>();
         firstPersonController = GetComponent<FirstPersonController>();
+        health = maxHealth;
     }
 
     /// <summary>
@@ -52,8 +58,12 @@ public class Health : MonoBehaviour
         {
             health -= damage;
         }
+        if(health > maxHealth)
+        {
+            health = maxHealth;
+        }
         ApplyStatusEffects(damageType);
-        CheckDeath();
+        StartCoroutine(CheckDeath(deathDelay));
     }
 
     /// <summary>
@@ -144,23 +154,30 @@ public class Health : MonoBehaviour
     /// <summary>
     /// Used to check if you have no health, if health is less than 1, you are dead and we set gameobject to an inactive state
     /// </summary>
-    private void CheckDeath()
+    private IEnumerator CheckDeath(float seconds)
     {
-        if (health < 1)
+        if (!deathHandledByBehaviorTree)
         {
-            if (firstPersonController == null && enemyBase == null) 
+            if (health < 1)
             {
-                try {
-                    Destroy(this.gameObject);
+                yield return new WaitForSeconds(seconds);
+                if (firstPersonController == null && enemyBase == null)
+                {
+                    Debug.Log("inside check death 4 A");
+                    try
+                    {
+                        Destroy(this.gameObject);
+                    }
+                    catch
+                    {
+                        Debug.Log("Trying to delete something that is not there");
+                    }
+
                 }
-                catch {
-                    Debug.Log("Trying to delete something that is not there");
+                else
+                {
+                    this.gameObject.SetActive(false);
                 }
-                
-            }
-            else
-            {
-                this.gameObject.SetActive(false);
             }
         }
     }

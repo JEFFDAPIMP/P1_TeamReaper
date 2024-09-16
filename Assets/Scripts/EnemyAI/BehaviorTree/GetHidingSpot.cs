@@ -7,9 +7,9 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
     [TaskDescription("Find furthest hiding spot from given object")]
     [TaskCategory("Movement")]
     [TaskIcon("c91b8fe3d68a9114dafd557a82d821d8", "67e27331b399ae14f9eb7a6debc1802d")]
-    public class HideFromObject : Action
+    public class GetHidingSpot : Action
     {
-        private NavMeshAgent agent;
+        //private NavMeshAgent agent;
 
         public SharedGameObject Player;
         public VisionCheck[] HidingPlaces;
@@ -20,7 +20,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
 
         public override void OnStart()
         {
-            agent = GetComponent<NavMeshAgent>();
+            //agent = GetComponent<NavMeshAgent>();
         }
 
         public override TaskStatus OnUpdate()
@@ -33,15 +33,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
             {
                 setHidingPlace();
             }
-
-            if(agent.remainingDistance <= 0.1)
-            {
-                return TaskStatus.Success;
-            }
-            else
-            {
-                return TaskStatus.Running;
-            }
+            return TaskStatus.Success;
         }
 
         private void setHidingPlace()
@@ -75,7 +67,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
             }
 
             //After checking all hiding places and getting the one that works best for me, set my target navigation to that
-            agent.SetDestination(myTargetHidingPlace.Value.transform.position);
+            //agent.SetDestination(myTargetHidingPlace.Value.transform.position);
         }
     }
 }

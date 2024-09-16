@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace BehaviorDesigner.Runtime.Tasks
 {
-    [TaskDescription("Check if int set in variables is less thatn target.")]
+    [TaskDescription("Check if int set in variables is less that target.")]
     [TaskCategory("Reflection")]
     [TaskIcon("{SkinColor}ReflectionIcon.png")]
     public class IntVariableIsLessThan : Conditional
