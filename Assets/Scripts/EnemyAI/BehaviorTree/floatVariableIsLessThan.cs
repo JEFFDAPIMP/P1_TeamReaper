@@ -5,12 +5,12 @@ namespace BehaviorDesigner.Runtime.Tasks
     [TaskDescription("Check if int set in variables is less that target.")]
     [TaskCategory("Reflection")]
     [TaskIcon("{SkinColor}ReflectionIcon.png")]
-    public class IntVariableIsLessThan : Conditional
+    public class floatVariableIsLessThan : Conditional
     {
         [Tooltip("Variable that should be less")]
-        public SharedInt variableToCheck;
+        public SharedFloat variableToCheck;
         [Tooltip("Value that variable should be less than")]
-        public SharedInt valueToBeLessThan;
+        public SharedFloat valueToBeLessThan;
 
         public override TaskStatus OnUpdate()
         {

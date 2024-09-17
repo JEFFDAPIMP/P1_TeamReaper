@@ -14,9 +14,13 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables
         public override TaskStatus OnUpdate()
         {
             if (variable.Value == null && compareTo.Value != null)
+            {
                 return TaskStatus.Failure;
+            }
             if (variable.Value == null && compareTo.Value == null)
+            {
                 return TaskStatus.Success;
+            }
 
             return variable.Value.Equals(compareTo.Value) ? TaskStatus.Success : TaskStatus.Failure;
         }

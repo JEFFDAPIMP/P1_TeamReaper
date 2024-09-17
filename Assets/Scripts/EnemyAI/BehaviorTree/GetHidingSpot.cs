@@ -10,6 +10,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
     public class GetHidingSpot : Action
     {
         //private NavMeshAgent agent;
+        public CaveManager CaveManager;
 
         public SharedGameObject Player;
         public VisionCheck[] HidingPlaces;
@@ -21,10 +22,18 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         public override void OnStart()
         {
             //agent = GetComponent<NavMeshAgent>();
+            HidingPlaces = CaveManager.GetAllAvalibleHidingSpots();
         }
 
         public override TaskStatus OnUpdate()
         {
+            HidingPlaces = CaveManager.GetAllAvalibleHidingSpots();
+
+            if(HidingPlaces.Length < 0) {
+                myTargetHidingPlace.Value = null;
+                return TaskStatus.Failure;
+            }
+
             if (!myTargetHidingPlace.Value)
             {
                 setHidingPlace();
@@ -38,6 +47,23 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
 
         private void setHidingPlace()
         {
+            for(int i = 0; i < HidingPlaces.Length; i++)
+            {
+                int index = Random.Range(0, HidingPlaces.Length - 1);
+                Debug.Log("index = " + index);
+                if (!HidingPlaces[index].CanSeePlayer())
+                {
+                    //Debug.Log("Found Hiding place hidden from player");
+                    myTargetHidingPlace.Value = HidingPlaces[index].transform;
+                    break;
+                }
+            }
+            if (!myTargetHidingPlace.Value)
+            {
+                setHidingPlace();
+            }
+
+            /*
             foreach (VisionCheck hidingPlace in HidingPlaces)
             {
 
@@ -68,6 +94,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
 
             //After checking all hiding places and getting the one that works best for me, set my target navigation to that
             //agent.SetDestination(myTargetHidingPlace.Value.transform.position);
+            */
         }
     }
 }

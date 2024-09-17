@@ -17,7 +17,7 @@ public class GetStepOutPoint : Action
 
     public override TaskStatus OnUpdate()
     {
-        if(Random.Range(0, 1) == 0)
+        if(Random.Range(0, 2) == 0)
         {
             peekSpot.Value = peekSpot1;
         }
@@ -25,7 +25,6 @@ public class GetStepOutPoint : Action
         {
             peekSpot.Value = peekSpot2;
         }
-        
         return TaskStatus.Success;
     }
 }

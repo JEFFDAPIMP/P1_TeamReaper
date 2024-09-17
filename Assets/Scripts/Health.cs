@@ -26,6 +26,7 @@ public class Health : MonoBehaviour
     [SerializeField] private int timeToStopIfSticky = 3;
 
     [SerializeField] private bool deathHandledByBehaviorTree = false;
+    [SerializeField] private bool makeTriggerOnDeath = false;
 
     public FirstPersonController firstPersonController = null;
     public EnemyBase enemyBase = null;
@@ -61,6 +62,10 @@ public class Health : MonoBehaviour
         if(health > maxHealth)
         {
             health = maxHealth;
+        }
+        if(health < 0)
+        {
+            health = 0;
         }
         ApplyStatusEffects(damageType);
         StartCoroutine(CheckDeath(deathDelay));
@@ -161,22 +166,28 @@ public class Health : MonoBehaviour
             if (health < 1)
             {
                 yield return new WaitForSeconds(seconds);
-                if (firstPersonController == null && enemyBase == null)
+                if (makeTriggerOnDeath)
                 {
-                    Debug.Log("inside check death 4 A");
-                    try
-                    {
-                        Destroy(this.gameObject);
-                    }
-                    catch
-                    {
-                        Debug.Log("Trying to delete something that is not there");
-                    }
-
+                    this.gameObject.GetComponent<Collider>().isTrigger = true;
                 }
                 else
                 {
-                    this.gameObject.SetActive(false);
+                    if (firstPersonController == null && enemyBase == null)
+                    {
+                        try
+                        {
+                            Destroy(this.gameObject);
+                        }
+                        catch
+                        {
+                            Debug.LogError("Trying to delete something that is not there");
+                        }
+
+                    }
+                    else
+                    {
+                        this.gameObject.SetActive(false);
+                    }
                 }
             }
         }

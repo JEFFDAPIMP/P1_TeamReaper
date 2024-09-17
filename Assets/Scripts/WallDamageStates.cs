@@ -26,18 +26,24 @@ public class WallDamageStates : MonoBehaviour
             ThirdObjectToRemove.SetActive(true);
         }
 
-        if (health.GetHealth() <= 10)
+        if (0 < health.GetHealth() && health.GetHealth() <= 10)
         {
             FirstObjectToRemove.SetActive(false);
+            SecondObjectToRemove.SetActive(true);
+            ThirdObjectToRemove.SetActive(true);
         }
 
-        if (health.GetHealth() <= 5)
+        if (0 < health.GetHealth() && health.GetHealth() <= 5)
         {
+            FirstObjectToRemove.SetActive(false);
             SecondObjectToRemove.SetActive(false);
+            ThirdObjectToRemove.SetActive(true);
         }
 
         if (health.GetHealth() <= 0)
         {
+            FirstObjectToRemove.SetActive(false);
+            SecondObjectToRemove.SetActive(false);
             ThirdObjectToRemove.SetActive(false);
         }
     }
