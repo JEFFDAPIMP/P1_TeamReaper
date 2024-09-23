@@ -91,4 +91,9 @@ public class PlayerInventorySwitcher : MonoBehaviour
     {
         return playerInventory[currentItemIndex].GetComponent<PlayerWeapon>();
     }
+
+    public int GetCurrentWeaponIndex()
+    {
+        return currentItemIndex;
+    }
 }
