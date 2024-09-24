@@ -23,6 +23,7 @@ public class PlayerItemSongTrigger : MonoBehaviour
         if (currentInventoryIndex != nextInventoryIndex)
         {
             musicManager.ChangeTrack(nextInventoryIndex + musicManagerIndexOffset, volume);
+            //musicManager.ChangeTrackWithTransition(nextInventoryIndex + musicManagerIndexOffset, volume);
             musicManager.StopTrack(currentInventoryIndex + musicManagerIndexOffset);
             currentInventoryIndex = nextInventoryIndex;
         }

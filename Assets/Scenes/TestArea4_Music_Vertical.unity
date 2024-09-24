@@ -209,6 +209,8 @@ GameObject:
   - component: {fileID: 23775767}
   - component: {fileID: 23775768}
   - component: {fileID: 23775769}
+  - component: {fileID: 23775770}
+  - component: {fileID: 23775772}
   m_Layer: 0
   m_Name: GAME MASTER
   m_TagString: Untagged
@@ -238,13 +240,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23775766}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8ab47d827f21cd4aa125bcfe605a59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainTrack: 0
   mainTrackVolume: 1
+  transitionClip: {fileID: 8300000, guid: 32eced5a81f8ccb4bae1611e1689348b, type: 3}
   musicTracks:
   - {fileID: 8300000, guid: f90d854d87971d343a6cd57d943c7a36, type: 3}
   - {fileID: 8300000, guid: ab7976edb206d764bbb9e263f4bfb872, type: 3}
@@ -257,7 +260,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7bb89d95e51a57a4ebaabbf036e6a838, type: 3}
   - {fileID: 8300000, guid: 9de00216002752d4aa1b780ebef5579b, type: 3}
   monstersWithMusic: []
+  previousTime: 0
 --- !u!114 &23775769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23775766}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0bf087128a95c4c8d53b0da09c27b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicManagerIndexOffset: 4
+  volume: 0.5
+--- !u!114 &23775770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,11 +284,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 23775766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e0bf087128a95c4c8d53b0da09c27b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 847313ebae006194bbf75cc327b1cff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicManagerIndexOffset: 4
-  volume: 0.5
+  mainTrackClip: {fileID: 8300000, guid: f90d854d87971d343a6cd57d943c7a36, type: 3}
+  transitionClip: {fileID: 8300000, guid: deea346c4942cc442b63935b1eab8670, type: 3}
+  additionalTracks:
+  - {fileID: 8300000, guid: ab7976edb206d764bbb9e263f4bfb872, type: 3}
+  - {fileID: 8300000, guid: c6c284624f2d80642b5ef26f69257380, type: 3}
+  - {fileID: 8300000, guid: b16d60b2e0362194ead2f9818793feaa, type: 3}
+  - {fileID: 8300000, guid: 752dc8cd66c3dd540b616f92e71805c8, type: 3}
+  - {fileID: 8300000, guid: 8558c670a689c8d4bbf206dc9f3a52f3, type: 3}
+  - {fileID: 8300000, guid: 5d2341c456d1f9f48a986ff378ffa772, type: 3}
+  - {fileID: 8300000, guid: a8b2f813087059d4a8b11ae519f9a800, type: 3}
+  - {fileID: 8300000, guid: 7bb89d95e51a57a4ebaabbf036e6a838, type: 3}
+  - {fileID: 8300000, guid: 9de00216002752d4aa1b780ebef5579b, type: 3}
+--- !u!114 &23775772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23775766}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bae05c57a0ba34ab4c6bb2848ce6d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicDuration: 0
+  goalTime: 0
+  delayStart: 0.5
+  currentClip: {fileID: 8300000, guid: 8558c670a689c8d4bbf206dc9f3a52f3, type: 3}
+  _audioSources:
+  - {fileID: 0}
+  - {fileID: 0}
+  audioToggle: 0
 --- !u!1 &35020844
 GameObject:
   m_ObjectHideFlags: 0
