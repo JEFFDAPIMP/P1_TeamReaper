@@ -85,6 +85,16 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    public void StopAllTracksExceptMainFade(float duration)
+    {
+        for (int i = 0; i < audioSources.Count; i++)
+        {
+            if (i == mainTrack) { continue; }
+
+            FadeOutTrack(i, duration);
+        }
+    }
+
 
     public void StopAndChangeTrackAfterLoop(int trackIndex, float targetVolume)
     {
@@ -123,4 +133,56 @@ public class MusicManager : MonoBehaviour
         ChangeTrack(currentTrackIndex, targetVolume);
     }
     */
+
+    public void FadeInTrack(int trackIndex, float targetVolume, float duration)
+    {
+        Debug.Log("Music Manager - inside FadeInTrack");
+        if (trackIndex < audioSources.Count)
+        {
+            StartCoroutine(FadeInCoroutine(audioSources[trackIndex], targetVolume, duration));
+        }
+    }
+
+    private IEnumerator FadeInCoroutine(AudioSource audioSource, float targetVolume, float duration)
+    {
+        Debug.Log("Music Manager - inside FadeInCoroutine");
+        float startVolume = audioSource.volume;
+        float time = 0;
+
+        //audioSource.Play();
+
+        while (time < duration)
+        {
+            Debug.Log("Music Manager - inside FadeInCoroutine - loop");
+            audioSource.volume = Mathf.Lerp(startVolume, targetVolume, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        audioSource.volume = targetVolume;
+    }
+    public void FadeOutTrack(int trackIndex, float duration)
+    {
+        if (trackIndex < audioSources.Count)
+        {
+            StartCoroutine(FadeOutCoroutine(audioSources[trackIndex], duration));
+        }
+    }
+
+    private IEnumerator FadeOutCoroutine(AudioSource audioSource, float duration)
+    {
+        float startVolume = audioSource.volume;
+        float time = 0;
+
+        while (time < duration)
+        {
+            audioSource.volume = Mathf.Lerp(startVolume, 0, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        audioSource.volume = 0;
+        //audioSource.Stop();
+    }
+
 }
