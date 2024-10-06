@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BillBoardTree : MonoBehaviour
 {
-    private Camera _camera;
-    private GameObject parentObject;
+    [SerializeField] private Camera _camera;
+    [SerializeField] private GameObject parentObject;
     [SerializeField] private bool useStaticBillboard;
 
     public float x = 90f;
