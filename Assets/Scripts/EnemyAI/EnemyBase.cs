@@ -11,8 +11,8 @@ public class EnemyBase : MonoBehaviour
 
     private NavMeshAgent agent;
 
-    [SerializeField] private float speed = 3.5f;
-    [SerializeField] private float icedSpeed = 1f;
+    public float speed = 3.5f;
+    public float icedSpeed = 1f;
 
     public bool iced = false;
     public bool stuck = false;
