@@ -16,6 +16,7 @@ public class EnemyBase : MonoBehaviour
 
     public bool iced = false;
     public bool stuck = false;
+    public bool wondering = false;
 
     //For enemy Web/stuck
     private Collider other;
@@ -38,13 +39,26 @@ public class EnemyBase : MonoBehaviour
             stuck = false;
         }
 
-        agent.SetDestination(player.transform.position);
+        if (wondering)
+        {
+            if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+            {
+                Wander();
+            }
+        }
+        else
+        {
+            agent.SetDestination(player.transform.position);
+        }
+
+        
         if(iced)
         {
             agent.speed = icedSpeed;
         }
         else if (stuck)
         {
+            Debug.Log("enemy is stuck!");
             agent.speed = 0;
         }
         else
@@ -60,5 +74,20 @@ public class EnemyBase : MonoBehaviour
         {
             stuck = true;
         }
+    }
+
+    public void setPlayer(GameObject newPlayer)
+    {
+        this.player = newPlayer;
+    }
+
+    public void Wander()
+    {
+        Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * 10f;
+        randomDirection += transform.position;
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randomDirection, out hit, 10f, 1);
+        Vector3 finalPosition = hit.position;
+        agent.SetDestination(finalPosition);
     }
 }

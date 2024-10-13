@@ -14,6 +14,8 @@ public class SnowconeManController : MonoBehaviour
     public float snowballAttackRange = 1f;
     public float projectileSpeed = 10f;
     private bool isRaging = false;
+    private bool bossIsCalling = false;
+    private GameObject bossGameObject;
     private float nextThrowTime = 0f;
     private EnemyBase enemyBase;
     private Health health;
@@ -31,6 +33,11 @@ public class SnowconeManController : MonoBehaviour
 
     void Update()
     {
+        if (bossIsCalling)
+        {
+            BossIsCallingBehavior();
+            return;
+        }
         if(health.health < health.maxHealth)
         {
             isRaging = true;
@@ -64,6 +71,7 @@ public class SnowconeManController : MonoBehaviour
 
     void RageBehavior()
     {
+        RotateTowardsPlayer();
         animator.SetBool("Raging", true);
         enemyBase.speed = rageSpeed;
 
@@ -77,6 +85,13 @@ public class SnowconeManController : MonoBehaviour
             ThrowPunch();
             nextThrowTime = Time.time + throwCooldown;
         }
+    }
+
+    void BossIsCallingBehavior()
+    {
+        enemyBase.speed = rageSpeed;
+        animator.SetBool("Raging", true);
+        enemyBase.setPlayer(bossGameObject);
     }
 
     void ThrowSnowball()
@@ -99,5 +114,11 @@ public class SnowconeManController : MonoBehaviour
         Vector3 direction = (player.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
+    }
+
+    public void bossCalled(GameObject bossGameObject)
+    {
+        bossIsCalling = true;
+        this.bossGameObject = bossGameObject;
     }
 }

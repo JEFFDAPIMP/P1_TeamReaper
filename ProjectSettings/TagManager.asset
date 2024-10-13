@@ -12,6 +12,8 @@ TagManager:
   - Wet
   - Ground
   - Target
+  - Minion
+  - Boss
   layers:
   - Default
   - TransparentFX
