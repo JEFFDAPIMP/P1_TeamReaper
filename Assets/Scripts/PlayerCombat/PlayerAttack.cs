@@ -60,6 +60,13 @@ public class PlayerAttack : MonoBehaviour
     private void handleShooting(int fireInput)
     {
         weapon = inventorySwitcher.getCurrentWeapon();
+        if (weapon.canRunOut)
+        {
+            if(weapon.currentAmmoCount <= 0)
+            {
+                return;
+            }
+        }
         if (weapon.currentAmmoCount <= 0)
         {
             StartCoroutine(ReloadWeapon(weapon));

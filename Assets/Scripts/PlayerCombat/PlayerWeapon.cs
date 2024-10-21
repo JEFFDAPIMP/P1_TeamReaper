@@ -7,6 +7,9 @@ public class PlayerWeapon : MonoBehaviour
 {
     public enum firemodes { singleShot, burstFire, fullAuto, disabled };
 
+    [Header("Weapon Name")]
+    public string weaponName = string.Empty;
+
     [Header("Weapon values for fire input 1")]
     public firemodes firemode1 = firemodes.singleShot;
     public GameObject bulletPrefab1;
@@ -25,4 +28,5 @@ public class PlayerWeapon : MonoBehaviour
     public int maxAmmoCount;
     public int currentAmmoCount;
     public float reloadTime;
+    public bool canRunOut = false;
 }
