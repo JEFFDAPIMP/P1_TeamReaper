@@ -2284,6 +2284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a91fe7202300d0429f151905ae187f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 
   firemode1: 0
   bulletPrefab1: {fileID: 8102146516850116624, guid: 1ad2197e730b7f8408147194d4af82a2, type: 3}
   bulletSpeed1: 15
@@ -2297,6 +2298,7 @@ MonoBehaviour:
   maxAmmoCount: 10
   currentAmmoCount: 10
   reloadTime: 2
+  canRunOut: 0
 --- !u!1 &389491596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,6 +3049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider6
       objectReference: {fileID: 0}
+    - target: {fileID: 864048828000721876, guid: 69eed2c946a18fc4baf7ae85b84f85b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 864048828000721880, guid: 69eed2c946a18fc4baf7ae85b84f85b6, type: 3}
       propertyPath: player
       value: 
@@ -3584,6 +3590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a91fe7202300d0429f151905ae187f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 
   firemode1: 0
   bulletPrefab1: {fileID: 8102146516850116624, guid: 80ae422edc11bb143adb8ac11f9471dc, type: 3}
   bulletSpeed1: 20
@@ -3597,6 +3604,7 @@ MonoBehaviour:
   maxAmmoCount: 50
   currentAmmoCount: 50
   reloadTime: 1
+  canRunOut: 0
 --- !u!1 &537642060
 GameObject:
   m_ObjectHideFlags: 0
@@ -3753,6 +3761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a91fe7202300d0429f151905ae187f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 
   firemode1: 1
   bulletPrefab1: {fileID: 6181921083931347445, guid: 024f10986bcc78749bf31be32f2bccbd, type: 3}
   bulletSpeed1: 15
@@ -3766,6 +3775,7 @@ MonoBehaviour:
   maxAmmoCount: 100
   currentAmmoCount: 100
   reloadTime: 3
+  canRunOut: 0
 --- !u!1 &545441764
 GameObject:
   m_ObjectHideFlags: 0
@@ -4045,6 +4055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a91fe7202300d0429f151905ae187f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 
   firemode1: 0
   bulletPrefab1: {fileID: 8102146516850116624, guid: c15935c0f3b5cc84ba9c915042edb9bc, type: 3}
   bulletSpeed1: -10
@@ -4058,6 +4069,7 @@ MonoBehaviour:
   maxAmmoCount: 1
   currentAmmoCount: 1
   reloadTime: 0
+  canRunOut: 0
 --- !u!1 &569194209
 GameObject:
   m_ObjectHideFlags: 0
@@ -7606,6 +7618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a91fe7202300d0429f151905ae187f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 
   firemode1: 0
   bulletPrefab1: {fileID: 8102146516850116624, guid: 53010cebbffc8eb4a94586cde1d1125a, type: 3}
   bulletSpeed1: 10
@@ -7619,6 +7632,7 @@ MonoBehaviour:
   maxAmmoCount: 1
   currentAmmoCount: 1
   reloadTime: 0
+  canRunOut: 0
 --- !u!1 &947444669
 GameObject:
   m_ObjectHideFlags: 0
@@ -8081,7 +8095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c91b5ff4fd46746a15798395fe619a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 907218068}
+  Boss: {fileID: 509874582}
 --- !u!1 &1028513131
 GameObject:
   m_ObjectHideFlags: 0
@@ -10415,6 +10429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a91fe7202300d0429f151905ae187f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 
   firemode1: 2
   bulletPrefab1: {fileID: 3849757529109027320, guid: 2972c96ac8c424b448af693fa283c290, type: 3}
   bulletSpeed1: 15
@@ -10428,6 +10443,7 @@ MonoBehaviour:
   maxAmmoCount: 100
   currentAmmoCount: 100
   reloadTime: 2
+  canRunOut: 0
 --- !u!1 &1188037043
 GameObject:
   m_ObjectHideFlags: 0
