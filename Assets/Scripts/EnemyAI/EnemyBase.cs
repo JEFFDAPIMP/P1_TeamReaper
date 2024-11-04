@@ -17,6 +17,10 @@ public class EnemyBase : MonoBehaviour
     public bool iced = false;
     public bool stuck = false;
     public bool wondering = false;
+    public bool patrolling = false;
+
+    public Transform[] patrolPoints;
+    private int currentPatrolIndex = 0;
 
     //For enemy Web/stuck
     private Collider other;
@@ -46,13 +50,17 @@ public class EnemyBase : MonoBehaviour
                 Wander();
             }
         }
+        else if (patrolling)
+        {
+            Patrol();
+        }
         else
         {
             agent.SetDestination(player.transform.position);
         }
 
-        
-        if(iced)
+
+        if (iced)
         {
             agent.speed = icedSpeed;
         }
@@ -89,5 +97,25 @@ public class EnemyBase : MonoBehaviour
         NavMesh.SamplePosition(randomDirection, out hit, 10f, 1);
         Vector3 finalPosition = hit.position;
         agent.SetDestination(finalPosition);
+    }
+
+    public void Patrol()
+    {
+        if (patrolPoints.Length < 1)
+        {
+            Wander();
+            return;
+        }
+
+        // Set the destination to the current patrol point
+        agent.SetDestination(patrolPoints[currentPatrolIndex].position);
+
+        // Check if the agent has reached the current patrol point
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+        {
+            // Move to the next patrol point
+            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
+
+        }
     }
 }

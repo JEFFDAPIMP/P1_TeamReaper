@@ -40,9 +40,9 @@ public class Health : MonoBehaviour
     {
         enemyBase = GetComponent<EnemyBase>();
         firstPersonController = GetComponent<FirstPersonController>();
-        if (firstPersonController)
+        if (firstPersonController != null)
         {
-            handlePlayerDeath = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<HandlePlayerDeath>();
+            //handlePlayerDeath = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<HandlePlayerDeath>();
         }
         health = maxHealth;
     }
@@ -193,7 +193,7 @@ public class Health : MonoBehaviour
                     }
                     if (handlePlayerDeath)
                     {
-                        doDeath();
+                        //doDeath();
                     }
                     else
                     {
