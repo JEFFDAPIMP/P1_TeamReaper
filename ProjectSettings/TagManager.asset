@@ -15,6 +15,7 @@ TagManager:
   - Minion
   - Boss
   - GameMaster
+  - PezGun
   layers:
   - Default
   - TransparentFX

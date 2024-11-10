@@ -11,7 +11,7 @@ public class PezPickupTrigger : MonoBehaviour
     //Shouldn't need to change these.
     private string playerTag = "Player";
     private string MainCameraTag = "MainCamera";
-    private string expectedPezWeaponName = "Pez";
+    private string expectedPezWeaponName = "Pez Dispensor";
 
 
     /// <summary>
@@ -32,6 +32,11 @@ public class PezPickupTrigger : MonoBehaviour
                 pezWeapon = weapon;
                 break;
             }
+        }
+
+        if (pezWeapon == null)
+        {
+            Debug.Log("Pez weapon not set, check expectedPezWeaponName of PezPickupTrigger, to the set Weapon Name of the Pez weapon");
         }
     }
 

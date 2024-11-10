@@ -13,7 +13,7 @@ using UnityEngine.InputSystem;
 public class PauseManager : MonoBehaviour
 {
     public GameObject pauseMenuUI; // Reference to the pause menu UI panel
-    public GameObject pauseButton; // Reference to the pause button
+    public GameObject resumeButton; // Reference to the resume button
     private bool isPaused = false;
     private bool buttonDown = false;
     private GameObject currentSelection;
@@ -66,7 +66,7 @@ public class PauseManager : MonoBehaviour
         {
             if (eventSystem.currentSelectedGameObject == null)
             {
-                eventSystem.SetSelectedGameObject(pauseButton);
+                eventSystem.SetSelectedGameObject(resumeButton);
             }
             else
             {
@@ -110,7 +110,7 @@ public class PauseManager : MonoBehaviour
 
 
         playerInput.SwitchCurrentActionMap("UI");
-        eventSystem.firstSelectedGameObject = pauseButton;
+        eventSystem.firstSelectedGameObject = resumeButton;
     }
 
     public void ResumeGame()
