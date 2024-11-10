@@ -12,6 +12,7 @@ public class Damage : MonoBehaviour
     [SerializeField] private bool doDamageOverTime = false;
     [SerializeField] private int damageTimer = 0;
     private bool isCausingDamageOverTime = false;
+    [SerializeField] private bool destoryOnTriggerEnter = true;
 
     /// <summary>
     /// Turn the collider into a trigger when object is initialised, regardless of whether or not the script is enabled.
@@ -35,7 +36,10 @@ public class Damage : MonoBehaviour
             {
                 health.Damage(damageAmount, damageType);
             }
-            Destroy(this.gameObject);
+            if (destoryOnTriggerEnter)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 

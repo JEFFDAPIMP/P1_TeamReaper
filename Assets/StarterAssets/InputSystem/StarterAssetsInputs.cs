@@ -18,6 +18,8 @@ namespace StarterAssets
 		public bool changeWeaponBack;
 		public Vector2 scrollDirection;
 		public bool reload;
+		public bool pause;
+		public bool click;
 
 		public bool shooting1;
 		public bool shooting2;
@@ -63,6 +65,11 @@ namespace StarterAssets
 			ShootInput2(value.isPressed);
 		}
 
+		public void OnPause(InputValue value)
+		{
+			PauseInput(value.isPressed);
+		}
+
 		public void OnChangeWeaponBack(InputValue value)
 		{
 			ChangeWeaponBack(value.isPressed);
@@ -81,6 +88,11 @@ namespace StarterAssets
 		public void OnReload(InputValue value)
 		{
 			ReloadInput(value.isPressed);
+		}
+
+		public void OnClick(InputValue value)
+		{
+			UIClick(value.isPressed);
 		}
 #endif
 
@@ -115,7 +127,13 @@ namespace StarterAssets
 			shoot2 = newShoot2State;
 		}
 
-		public void ChangeWeaponBack(bool newChangeWeaponBackState)
+		public void PauseInput(bool newPauseState)
+		{
+			pause = newPauseState;
+		}
+
+
+        public void ChangeWeaponBack(bool newChangeWeaponBackState)
 		{
 			changeWeaponBack = newChangeWeaponBackState;
 		}
@@ -133,6 +151,11 @@ namespace StarterAssets
 		public void ReloadInput(bool newReloadState)
 		{
 			reload = newReloadState;
+		}
+
+		public void UIClick(bool newClickState)
+		{
+			click = newClickState;
 		}
 
 
