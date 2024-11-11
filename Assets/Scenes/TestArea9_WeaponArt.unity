@@ -4189,6 +4189,14 @@ PrefabInstance:
       propertyPath: playerInventorySwitcher
       value: 
       objectReference: {fileID: 135756641613574985}
+    - target: {fileID: 932148132084298725, guid: 42851746be0c6e64284a1e882f81f005, type: 3}
+      propertyPath: pauseManager
+      value: 
+      objectReference: {fileID: 5393215579111688473}
+    - target: {fileID: 932148132084298725, guid: 42851746be0c6e64284a1e882f81f005, type: 3}
+      propertyPath: mainMenuSceneName
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 932148132084298726, guid: 42851746be0c6e64284a1e882f81f005, type: 3}
       propertyPath: starterAssetsInputs
       value: 

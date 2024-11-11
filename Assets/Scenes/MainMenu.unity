@@ -909,7 +909,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0722b5db31cf6d45bb461301a63abcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: TestArea6_FightClub
+  mainMenuSceneName: MainMenu
+  nextSceneName: TestArea9_WeaponArt
 --- !u!1 &1675052029
 GameObject:
   m_ObjectHideFlags: 0
