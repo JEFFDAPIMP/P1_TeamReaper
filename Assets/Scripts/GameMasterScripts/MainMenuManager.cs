@@ -1,10 +1,11 @@
 using UnityEngine;
-//using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public string mainMenuSceneName = "GameScene";
     public string nextSceneName = "GameScene";
+    public PauseManager pauseManager;
 
     /*
     public void OnStartGame(InputAction.CallbackContext context)
@@ -37,5 +38,14 @@ public class MainMenuManager : MonoBehaviour
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
+    }
+
+    public void GoToMainMenu()
+    {
+        if(pauseManager != null)
+        {
+            pauseManager.ResumeGame();
+        }
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 }

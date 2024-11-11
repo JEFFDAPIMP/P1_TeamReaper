@@ -10,6 +10,9 @@ public class PlayerWeapon : MonoBehaviour
     [Header("Weapon Name")]
     public string weaponName = string.Empty;
 
+    [Header("Weapon Animation Controller")]
+    public Animator weaponAnimator;
+
     [Header("Weapon values for fire input 1")]
     public firemodes firemode1 = firemodes.singleShot;
     public GameObject bulletPrefab1;

@@ -42,7 +42,7 @@ public class Health : MonoBehaviour
         firstPersonController = GetComponent<FirstPersonController>();
         if (firstPersonController != null)
         {
-            //handlePlayerDeath = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<HandlePlayerDeath>();
+            handlePlayerDeath = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<HandlePlayerDeath>();
         }
         health = maxHealth;
     }
@@ -193,7 +193,7 @@ public class Health : MonoBehaviour
                     }
                     if (handlePlayerDeath)
                     {
-                        //doDeath();
+                        doDeath();
                     }
                     else
                     {
@@ -204,6 +204,9 @@ public class Health : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// When called, switch our input to UI and tell player death manager its time to display the death menu
+    /// </summary>
     private void doDeath()
     {
         this.gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");

@@ -21,6 +21,9 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private bool isReloading = false;
 
+    private string animatorAttackTriggerName = "attack";
+    private string animatorReloadBoolName = "reload";
+
     /// <summary>
     /// Awake called on object is initialised, regardless of whether or not the script is enabled.
     /// </summary>
@@ -75,6 +78,7 @@ public class PlayerAttack : MonoBehaviour
         {
             case PlayerWeapon.firemodes.singleShot:
                 shootBullet(weapon, fireInput);
+                animateAttack(weapon);
                 starterAssetsInputs.shoot = false;
                 return;
             case PlayerWeapon.firemodes.burstFire:
@@ -82,6 +86,7 @@ public class PlayerAttack : MonoBehaviour
                                          fireInput, 
                                          (fireInput == 1) ? weapon.burstAmount1 : weapon.burstAmount2, 
                                          (fireInput == 1) ? weapon.fireRate1 : weapon.fireRate2));
+                animateAttack(weapon);
                 starterAssetsInputs.shoot = false;
                 return;
             case PlayerWeapon.firemodes.fullAuto:
@@ -89,6 +94,7 @@ public class PlayerAttack : MonoBehaviour
                 {
                     nextFireTime = Time.time + ((fireInput == 1) ? weapon.fireRate1 : weapon.fireRate2);
                     shootBullet(weapon, fireInput);
+                    animateAttack(weapon);
                 }
                 return;
             case PlayerWeapon.firemodes.disabled:
@@ -108,6 +114,18 @@ public class PlayerAttack : MonoBehaviour
         bullet.transform.SetParent(null);
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * weapon.bulletSpeed1;
         weapon.currentAmmoCount--;
+    }
+
+    /// <summary>
+    /// Check for animation controller, if one is present, then set off the "attack" trigger
+    /// </summary>
+    /// <param name="weapon"> The reference to the PlayerWeapon object that we are referencing</param>
+    private void animateAttack(PlayerWeapon weapon)
+    {
+        if(weapon.weaponAnimator != null)
+        {
+            weapon.weaponAnimator.SetTrigger(animatorAttackTriggerName);
+        }
     }
 
     /// <summary>
@@ -135,8 +153,24 @@ public class PlayerAttack : MonoBehaviour
     IEnumerator ReloadWeapon(PlayerWeapon weapon)
     {
         isReloading = true;
+        ReloadWeaponAnimation(weapon, true);
         yield return new WaitForSeconds(weapon.reloadTime);
         weapon.currentAmmoCount = weapon.maxAmmoCount;
+        ReloadWeaponAnimation(weapon, false);
         isReloading = false;
+    }
+
+    /// <summary>
+    /// Check for weapon animator reference, then if found attempt to set reload bool based on input
+    /// </summary>
+    /// <param name="weapon">PlayerWeapon reference to find the animator on</param>
+    /// <param name="input">desired boolean to set reload to</param>
+    private void ReloadWeaponAnimation(PlayerWeapon weapon, bool input)
+    {
+        if(weapon.weaponAnimator != null)
+        {
+            weapon.weaponAnimator.ResetTrigger(animatorAttackTriggerName);
+            weapon.weaponAnimator.SetBool(animatorReloadBoolName, input);
+        }
     }
 }
