@@ -777,7 +777,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7379829299933558576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.94, y: -1.21, z: -8.67}
+  m_LocalPosition: {x: -5.61, y: -1.21, z: -6.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -851,6 +851,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CottonCandyAnt Guard (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2904999896016388864, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2998372159180400806, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: player
       value: 
@@ -867,7 +871,8 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 7379829299933558577}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8853240147384841171, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
 --- !u!1 &2334523172445410886 stripped
 GameObject:
@@ -890,10 +895,22 @@ MonoBehaviour:
   runSpeed: 7
   sightRange: 10
   fovAngle: 45
-  debugMode: 1
+  debugMode: 0
+  cottonCandyAntsInSquad:
+  - {fileID: 861613080}
+  - {fileID: 31385070}
+  - {fileID: 335009452}
+  chompPrefab: {fileID: 8102146516850116624, guid: 53010cebbffc8eb4a94586cde1d1125a, type: 3}
+  chompPoint: {fileID: 8610104696154753547}
+  projectileSpeed: 1
 --- !u!4 &2334523172445410887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+  m_PrefabInstance: {fileID: 163236319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8610104696154753547 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8610104696276829140, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
   m_PrefabInstance: {fileID: 163236319}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &462682777
@@ -963,6 +980,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CottonCandyAnt Guard (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2904999896016388864, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2998372159180400806, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: player
       value: 
@@ -979,7 +1000,8 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 7379829299933558577}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8853240147384841171, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
 --- !u!1 &2334523172213220608 stripped
 GameObject:
@@ -1002,10 +1024,22 @@ MonoBehaviour:
   runSpeed: 7
   sightRange: 10
   fovAngle: 45
-  debugMode: 1
+  debugMode: 0
+  cottonCandyAntsInSquad:
+  - {fileID: 861613080}
+  - {fileID: 31385070}
+  - {fileID: 335009452}
+  chompPrefab: {fileID: 8102146516850116624, guid: 53010cebbffc8eb4a94586cde1d1125a, type: 3}
+  chompPoint: {fileID: 8610104695917328717}
+  projectileSpeed: 1
 --- !u!4 &2334523172213220609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+  m_PrefabInstance: {fileID: 462682777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8610104695917328717 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8610104696276829140, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
   m_PrefabInstance: {fileID: 462682777}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &993984549
@@ -1041,7 +1075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.1
+      value: 3.95
       objectReference: {fileID: 0}
     - target: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1075,6 +1109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CottonCandyAnt Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 2904999896016388864, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2998372159180400806, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: player
       value: 
@@ -1091,7 +1129,8 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 7379829299933558577}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8853240147384841171, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
 --- !u!1 &2334523172738768828 stripped
 GameObject:
@@ -1114,10 +1153,22 @@ MonoBehaviour:
   runSpeed: 7
   sightRange: 10
   fovAngle: 45
-  debugMode: 1
+  debugMode: 0
+  cottonCandyAntsInSquad:
+  - {fileID: 861613080}
+  - {fileID: 31385070}
+  - {fileID: 335009452}
+  chompPrefab: {fileID: 8102146516850116624, guid: 53010cebbffc8eb4a94586cde1d1125a, type: 3}
+  chompPoint: {fileID: 8610104696465507313}
+  projectileSpeed: 1
 --- !u!4 &2334523172738768829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+  m_PrefabInstance: {fileID: 993984549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8610104696465507313 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8610104696276829140, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
   m_PrefabInstance: {fileID: 993984549}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7379829298656119028
@@ -1179,6 +1230,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2904999896016388864, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2998372159180400806, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: player
       value: 
@@ -1195,8 +1250,14 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 7379829298401498367}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8853240147384841171, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+--- !u!4 &1231548955329547040 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8610104696276829140, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+  m_PrefabInstance: {fileID: 7379829298656119028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5048411837219411820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
@@ -1224,6 +1285,13 @@ MonoBehaviour:
   sightRange: 10
   fovAngle: 45
   debugMode: 0
+  cottonCandyAntsInSquad:
+  - {fileID: 7379829298669009731}
+  - {fileID: 7379829298656119031}
+  - {fileID: 7379829298875514287}
+  chompPrefab: {fileID: 8102146516850116624, guid: 53010cebbffc8eb4a94586cde1d1125a, type: 3}
+  chompPoint: {fileID: 1231548955329547040}
+  projectileSpeed: 1
 --- !u!1001 &7379829298669009728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1237,7 +1305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.95
+      value: -2.9
       objectReference: {fileID: 0}
     - target: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1245,7 +1313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.01
+      value: -12.64
       objectReference: {fileID: 0}
     - target: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1279,6 +1347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CottonCandyAnt
       objectReference: {fileID: 0}
+    - target: {fileID: 2904999896016388864, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2998372159180400806, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: player
       value: 
@@ -1295,8 +1367,18 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 7379829299933558577}
-    m_RemovedComponents: []
+    - target: {fileID: 8610104696276829140, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8853240147384841171, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+--- !u!4 &1231548955342370964 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8610104696276829140, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+  m_PrefabInstance: {fileID: 7379829298669009728}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5048411837231768792 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
@@ -1323,7 +1405,14 @@ MonoBehaviour:
   runSpeed: 7
   sightRange: 10
   fovAngle: 45
-  debugMode: 1
+  debugMode: 0
+  cottonCandyAntsInSquad:
+  - {fileID: 7379829298669009731}
+  - {fileID: 7379829298656119031}
+  - {fileID: 7379829298875514287}
+  chompPrefab: {fileID: 8102146516850116624, guid: 53010cebbffc8eb4a94586cde1d1125a, type: 3}
+  chompPoint: {fileID: 1231548955342370964}
+  projectileSpeed: 1
 --- !u!1001 &7379829298875514284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1383,6 +1472,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2904999896016388864, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2998372159180400806, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
       propertyPath: player
       value: 
@@ -1403,8 +1496,14 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[2]
       value: 
       objectReference: {fileID: 7379829299718372749}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8853240147384841171, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+--- !u!4 &1231548955146223224 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8610104696276829140, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
+  m_PrefabInstance: {fileID: 7379829298875514284}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5048411836765086260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2334523172289519512, guid: 88fb992a8d16f5545bcd6f15095fa734, type: 3}
@@ -1432,3 +1531,10 @@ MonoBehaviour:
   sightRange: 10
   fovAngle: 45
   debugMode: 0
+  cottonCandyAntsInSquad:
+  - {fileID: 7379829298669009731}
+  - {fileID: 7379829298656119031}
+  - {fileID: 7379829298875514287}
+  chompPrefab: {fileID: 8102146516850116624, guid: 53010cebbffc8eb4a94586cde1d1125a, type: 3}
+  chompPoint: {fileID: 1231548955146223224}
+  projectileSpeed: 1

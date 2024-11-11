@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyBase))]
@@ -17,7 +18,15 @@ public class CottonCandyAntController : MonoBehaviour
     [SerializeField] private float fovAngle = 45f; // Field of view angle for the vision cone
     [SerializeField] private bool debugMode = false; // Toggle for debug mode
 
+    [SerializeField] private List<CottonCandyAntController> cottonCandyAntsInSquad = new List<CottonCandyAntController>();
+    private bool squadAlerted = false;
+
     private Transform playerTransform;
+    [SerializeField] private GameObject chompPrefab;
+    [SerializeField] private Transform chompPoint;
+    [SerializeField] private float projectileSpeed;
+    private float nextChompTime;
+    [SerializeField] private float chompCooldown = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -34,28 +43,27 @@ public class CottonCandyAntController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //calculate health to see if we have taken damage
         float healthDifference = currentHealth - health.health;
         currentHealth = health.health;
 
+        //If taken damage go after player
         if (healthDifference > 0)
         {
             isChasingPlayer = true;
         }
 
         // Check if player is within vision cone and visible via raycasting
+        // If I can see player go after player
         if (IsPlayerInSight())
         {
             isChasingPlayer = true;
-            //animator.SetBool("IsChasing", true);
-        }
-        else
-        {
-            isChasingPlayer = false;
-            //animator.SetBool("IsChasing", false);
         }
 
+        //If im chasing player, let squad know its time to bring the pain, else look for player.
         if (isChasingPlayer)
         {
+            AlertSquad();
             Pursue();
         }
         else
@@ -64,6 +72,10 @@ public class CottonCandyAntController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Method used to check if player is within vision cone
+    /// </summary>
+    /// <returns></returns>
     private bool IsPlayerInSight()
     {
         Vector3 directionToPlayer = playerTransform.position - transform.position;
@@ -84,19 +96,88 @@ public class CottonCandyAntController : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Method used to tell enemyBase class we are partroling 
+    /// </summary>
     private void Patrol()
     {
         enemyBase.patrolling = true;
         enemyBase.speed = walkSpeed;
     }
 
+    /// <summary>
+    /// Method used to tell enemyBase to go after player
+    /// </summary>
     private void Pursue()
     {
         enemyBase.patrolling = false;
         enemyBase.speed = runSpeed;
         enemyBase.setPlayer(GameObject.FindGameObjectWithTag("Player"));
+
+        if (enemyBase.isAtDestination())
+        {
+            //if we wait long enough then chomp
+            if (Time.time >= nextChompTime)
+            {
+                Chomp();
+                nextChompTime = Time.time + chompCooldown;
+            }
+            
+        }
     }
 
+    /// <summary>
+    /// Method used to tell other ants that I found player and we should all go after the player.
+    /// </summary>
+    public void AlertSquad()
+    {
+        //If we have already alerted, then we are done.
+        if (squadAlerted)
+        {
+            return;
+        }
+
+        squadAlerted = true;
+        isChasingPlayer = true;
+
+        foreach (CottonCandyAntController antController in cottonCandyAntsInSquad)
+        {
+            antController.AlertSquad();
+        }
+    }
+    
+    /// <summary>
+    /// Instantiates a Chomp Bullet and sends it forward
+    /// </summary>
+    void Chomp()
+    {
+        //LookAtTarget();
+
+        GameObject chomp = Instantiate(chompPrefab, chompPoint.position, Quaternion.identity);
+        Vector3 direction = (playerTransform.position - transform.position).normalized;
+        chomp.GetComponent<Rigidbody>().velocity = direction * projectileSpeed;
+    }
+
+    /*
+    private void LookAtTarget()
+    {
+        float rotationSpeed = 100.0f;
+
+        // Calculate the direction to the target
+        Vector3 direction = (playerTransform.position - transform.position).normalized;
+
+        // Calculate the rotation needed to look at the target 
+        Quaternion lookRotation = Quaternion.LookRotation(direction); 
+        
+        // Rotate the object smoothly
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
+    }
+    */
+
+    /// <summary>
+    /// Method used for debugging within the inspector
+    /// If you want this off, just set debugMode to false.
+    /// </summary>
     private void OnDrawGizmos()
     {
         if (debugMode)

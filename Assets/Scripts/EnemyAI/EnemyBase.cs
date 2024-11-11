@@ -118,4 +118,14 @@ public class EnemyBase : MonoBehaviour
 
         }
     }
+
+    public bool isAtDestination()
+    {
+        // Check if the agent has reached the current patrol point
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+        {
+            return true;
+        }
+        return false;
+    }
 }
