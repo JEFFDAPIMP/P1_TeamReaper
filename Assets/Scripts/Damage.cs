@@ -29,6 +29,7 @@ public class Damage : MonoBehaviour
     /// <param name="other"> the Other collider object</param>
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log("OnTriggerEnter");
         if (!doDamageOverTime)
         {
             Health health = other.gameObject.GetComponent<Health>();
@@ -55,18 +56,23 @@ public class Damage : MonoBehaviour
                 //Debug.Log("FoundHealth");
                 if (!isCausingDamageOverTime)
                 {
-                    StartCoroutine(damageWithTime(damageTimer, health));
+                    StartCoroutine(DamageWithTime(damageTimer, health));
                 }
             }
         }
     }
 
-    private IEnumerator damageWithTime(int seconds, Health health)
+    private IEnumerator DamageWithTime(int seconds, Health health)
     {
         isCausingDamageOverTime = true;
         yield return new WaitForSeconds(seconds);
         //Debug.Log("IEnumerator - damageWithTime");
         health.Damage(damageAmount, damageType);
         isCausingDamageOverTime = false;
+    }
+
+    public void SetDamageType(Health.allDamageType damageType)
+    {
+        this.damageType = damageType;
     }
 }
