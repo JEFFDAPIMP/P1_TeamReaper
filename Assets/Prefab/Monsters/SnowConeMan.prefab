@@ -92,6 +92,9 @@ MonoBehaviour:
   icedSpeed: 1
   iced: 0
   stuck: 0
+  wondering: 0
+  patrolling: 0
+  patrolPoints: []
 --- !u!114 &2184888456185431127
 MonoBehaviour:
   m_ObjectHideFlags: 0

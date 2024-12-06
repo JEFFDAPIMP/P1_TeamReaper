@@ -7,26 +7,38 @@ public class UIFaceUpdater : MonoBehaviour
 {
     public Health playerHealth; // Reference to the player's health script
     public GameObject fullHealthPanel; // Reference to UI panel where full health face is displayed
-    public GameObject halfHealthPanel; // Reference to UI panel where half health face is displayed
-    public GameObject quarterHealthPanel; // Reference to UI panel where quarter health face is displayed
-    public GameObject lowHealthPanel; // Reference to UI panel where low health face is displayed
+    public GameObject hit1; // Reference to UI panel where half health face is displayed
+    public GameObject hit2; // Reference to UI panel where quarter health face is displayed
+    public GameObject hit3; // Reference to UI panel where low health face is displayed
+    public GameObject hit4; // Reference to UI panel where low health face is displayed
+    public GameObject hit5_dead; // Reference to UI panel where low health face is displayed
 
 
     void Update()
     {
-        if (playerHealth != null && fullHealthPanel != null && halfHealthPanel != null && quarterHealthPanel != null && lowHealthPanel != null)
+        if (playerHealth != null && fullHealthPanel != null && hit1 != null && hit2 != null && hit4 != null)
         {
-            if(playerHealth.health <= 10)
+            if(playerHealth.health <= 1)
+            {
+                updateFace(5);
+                return;
+            }
+            if(playerHealth.health <= 20)
+            {
+                updateFace(4);
+                return;
+            }
+            if (playerHealth.health <= 40)
             {
                 updateFace(3);
                 return;
             }
-            if(playerHealth.health <= 25)
+            if (playerHealth.health <= 60)
             {
                 updateFace(2);
                 return;
             }
-            if (playerHealth.health <= 50)
+            if (playerHealth.health <= 80)
             {
                 updateFace(1);
                 return;
@@ -49,9 +61,11 @@ public class UIFaceUpdater : MonoBehaviour
     private void updateFace(int index)
     {
         fullHealthPanel.SetActive(false);
-        halfHealthPanel.SetActive(false);
-        quarterHealthPanel.SetActive(false);
-        lowHealthPanel.SetActive(false);
+        hit1.SetActive(false);
+        hit2.SetActive(false);
+        hit3.SetActive(false);
+        hit4.SetActive(false);
+        hit5_dead.SetActive(false);
 
         switch (index)
         {
@@ -59,13 +73,19 @@ public class UIFaceUpdater : MonoBehaviour
                 fullHealthPanel.SetActive(true);
                 break;
             case 1:
-                halfHealthPanel.SetActive(true);
+                hit1.SetActive(true);
                 break;
             case 2:
-                quarterHealthPanel.SetActive(true);
+                hit2.SetActive(true);
                 break;
             case 3:
-                lowHealthPanel.SetActive(true);
+                hit3.SetActive(true);
+                break;
+            case 4:
+                hit4.SetActive(true);
+                break;
+            case 5:
+                hit5_dead.SetActive(true);
                 break;
             default:
                 Debug.LogError("Invalid option selected");
