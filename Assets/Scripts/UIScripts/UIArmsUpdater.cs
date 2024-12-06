@@ -19,6 +19,9 @@ public class UIArmsUpdater : MonoBehaviour
     public PlayerInventorySwitcher playerInventorySwitcher;
     private int currentIndex;
 
+    public GameObject weaponHolder;
+    public PlayerWeapon[] PlayerWeapons;
+
     /// <summary>
     /// Setup UI to only display weapons in players inventory
     /// </summary>
@@ -42,10 +45,10 @@ public class UIArmsUpdater : MonoBehaviour
         weapon5Panel.SetActive(false);
         weapon6Panel.SetActive(false);
 
-        PlayerWeapon[] PlayerWeapons = GameObject.FindGameObjectWithTag(MainCameraTag).GetComponentsInChildren<PlayerWeapon>();
         foreach (PlayerWeapon weapon in PlayerWeapons)
         {
-            if (weapon.weaponName == "Pez")
+            Debug.Log("weapon name is: " + weapon.weaponName);
+            if (weapon.weaponName == "Pez Dispensor")
             {
                 weapon1Panel.SetActive(true);
             }
