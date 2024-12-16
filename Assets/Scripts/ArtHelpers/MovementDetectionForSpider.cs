@@ -24,13 +24,13 @@ public class MovementDetectionForSpider : MonoBehaviour
         {
             animator.SetBool("Forward", true);
             animator.SetBool("Backward", false);
-            Debug.Log("Moving towards the player");
+            //Debug.Log("Moving towards the player");
         }
         else if (dotProduct < 0)
         {
             animator.SetBool("Forward", false);
             animator.SetBool("Backward", true);
-            Debug.Log("Moving away from the player");
+            //Debug.Log("Moving away from the player");
         }
 
         // Check if moving left or right relative to the player
@@ -39,13 +39,13 @@ public class MovementDetectionForSpider : MonoBehaviour
         {
             animator.SetBool("Right", true);
             animator.SetBool("Left", false);
-            Debug.Log("Moving to the right of the player");
+            //Debug.Log("Moving to the right of the player");
         }
         else if (crossProduct.y < 0)
         {
             animator.SetBool("Right", false);
             animator.SetBool("Left", true);
-            Debug.Log("Moving to the left of the player");
+            //Debug.Log("Moving to the left of the player");
         }
 
         lastPosition = currentPosition;

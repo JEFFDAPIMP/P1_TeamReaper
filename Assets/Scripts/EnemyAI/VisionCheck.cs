@@ -9,6 +9,16 @@ public class VisionCheck : MonoBehaviour
 
     private Vector3 offset = new Vector3(0, 1, 0); // transform offset to point at middle of player object VS players feet
 
+    private string playerTag = "Player";
+
+    private void Awake()
+    {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag(playerTag).transform;
+        }
+    }
+
     public bool CanSeePlayer()
     {
         //Vector3 directionToPlayer = player.position - transform.position;

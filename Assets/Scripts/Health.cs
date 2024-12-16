@@ -1,6 +1,8 @@
 using StarterAssets;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Handles health on any object that should be able to die
@@ -30,6 +32,7 @@ public class Health : MonoBehaviour
 
     public FirstPersonController firstPersonController = null;
     public EnemyBase enemyBase = null;
+    private HandlePlayerDeath handlePlayerDeath = null;
 
     private float deathDelay = 0.25f;
 
@@ -37,6 +40,10 @@ public class Health : MonoBehaviour
     {
         enemyBase = GetComponent<EnemyBase>();
         firstPersonController = GetComponent<FirstPersonController>();
+        if (firstPersonController != null)
+        {
+            handlePlayerDeath = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<HandlePlayerDeath>();
+        }
         health = maxHealth;
     }
 
@@ -184,6 +191,10 @@ public class Health : MonoBehaviour
                         }
 
                     }
+                    if (handlePlayerDeath)
+                    {
+                        doDeath();
+                    }
                     else
                     {
                         this.gameObject.SetActive(false);
@@ -191,6 +202,15 @@ public class Health : MonoBehaviour
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// When called, switch our input to UI and tell player death manager its time to display the death menu
+    /// </summary>
+    private void doDeath()
+    {
+        this.gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
+        handlePlayerDeath.DisplayDeathMenu();
     }
 
     /// <summary>
