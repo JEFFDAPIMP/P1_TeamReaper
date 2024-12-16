@@ -7678,9 +7678,9 @@ MonoBehaviour:
   fireRate1: 0.2
   burstAmount1: 3
   firemode2: 2
-  bulletPrefab2: {fileID: 6181921083931347445, guid: 024f10986bcc78749bf31be32f2bccbd, type: 3}
+  bulletPrefab2: {fileID: 8102146516850116624, guid: 89a51e260115f3448a91ad9e0ae29938, type: 3}
   bulletSpeed2: 10
-  fireRate2: 0.01
+  fireRate2: 1
   burstAmount2: 0
   maxAmmoCount: 100
   currentAmmoCount: 100
@@ -13979,10 +13979,10 @@ MonoBehaviour:
   bulletSpeed1: 10
   fireRate1: 0
   burstAmount1: 0
-  firemode2: 3
-  bulletPrefab2: {fileID: 8102146516850116624, guid: 53010cebbffc8eb4a94586cde1d1125a, type: 3}
+  firemode2: 2
+  bulletPrefab2: {fileID: 2849710076752509592, guid: 4801abcb41140a14b9597b7cb5c5efee, type: 3}
   bulletSpeed2: 10
-  fireRate2: 0
+  fireRate2: 1
   burstAmount2: 0
   maxAmmoCount: 1
   currentAmmoCount: 1
@@ -16947,10 +16947,10 @@ MonoBehaviour:
   bulletSpeed1: 15
   fireRate1: 0.1
   burstAmount1: 0
-  firemode2: 0
+  firemode2: 3
   bulletPrefab2: {fileID: 8102146516850116624, guid: 89a51e260115f3448a91ad9e0ae29938, type: 3}
   bulletSpeed2: 15
-  fireRate2: 0.1
+  fireRate2: 0.5
   burstAmount2: 0
   maxAmmoCount: 100
   currentAmmoCount: 100
@@ -17951,7 +17951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74073be45dcd3b7498863ee81fcc394c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1468226032}
+  player: {fileID: 0}
   caveManager: {fileID: 769075486}
   navMeshAgent: {fileID: 1254630532}
   jumpHeight: 5
@@ -28927,11 +28927,11 @@ PrefabInstance:
     - target: {fileID: 1663187150, guid: 2f7f3dde7ae722a4aafffe20691ad702, type: 3}
       propertyPath: thirdPersonInputs
       value: 
-      objectReference: {fileID: 135756641613574975}
+      objectReference: {fileID: 0}
     - target: {fileID: 1663187150, guid: 2f7f3dde7ae722a4aafffe20691ad702, type: 3}
       propertyPath: starterAssetsInputs
       value: 
-      objectReference: {fileID: 135756641613574975}
+      objectReference: {fileID: 0}
     - target: {fileID: 597308369130767402, guid: 2f7f3dde7ae722a4aafffe20691ad702, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -29027,7 +29027,7 @@ PrefabInstance:
     - target: {fileID: 8890774966862588244, guid: 2f7f3dde7ae722a4aafffe20691ad702, type: 3}
       propertyPath: playerInput
       value: 
-      objectReference: {fileID: 2006620068}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f7f3dde7ae722a4aafffe20691ad702, type: 3}
 --- !u!1 &1979835040
@@ -32746,19 +32746,19 @@ PrefabInstance:
     - target: {fileID: 932148132084298722, guid: 42851746be0c6e64284a1e882f81f005, type: 3}
       propertyPath: pauseManager
       value: 
-      objectReference: {fileID: 5393215579111688473}
+      objectReference: {fileID: 1064264630}
     - target: {fileID: 932148132084298722, guid: 42851746be0c6e64284a1e882f81f005, type: 3}
       propertyPath: playerAttack
       value: 
-      objectReference: {fileID: 135756641613574980}
+      objectReference: {fileID: 42327082}
     - target: {fileID: 932148132084298722, guid: 42851746be0c6e64284a1e882f81f005, type: 3}
       propertyPath: firstPersonController
       value: 
-      objectReference: {fileID: 5393215579111688472}
+      objectReference: {fileID: 42327083}
     - target: {fileID: 932148132084298722, guid: 42851746be0c6e64284a1e882f81f005, type: 3}
       propertyPath: playerInventorySwitcher
       value: 
-      objectReference: {fileID: 135756641613574985}
+      objectReference: {fileID: 42327086}
     - target: {fileID: 932148132084298725, guid: 42851746be0c6e64284a1e882f81f005, type: 3}
       propertyPath: pauseManager
       value: 
@@ -33739,7 +33739,7 @@ PrefabInstance:
     - target: {fileID: 864048828000721880, guid: 69eed2c946a18fc4baf7ae85b84f85b6, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 5393215579111688482}
+      objectReference: {fileID: 0}
     - target: {fileID: 5128589819482322583, guid: 69eed2c946a18fc4baf7ae85b84f85b6, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -34175,7 +34175,7 @@ PrefabInstance:
     - target: {fileID: 7172542272127127760, guid: 69eed2c946a18fc4baf7ae85b84f85b6, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[73]
       value: 
-      objectReference: {fileID: 5393215579111688482}
+      objectReference: {fileID: 0}
     - target: {fileID: 7172542272127127760, guid: 69eed2c946a18fc4baf7ae85b84f85b6, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[74]
       value: 
@@ -34607,7 +34607,7 @@ PrefabInstance:
     - target: {fileID: 7172542272127127760, guid: 69eed2c946a18fc4baf7ae85b84f85b6, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[181]
       value: 
-      objectReference: {fileID: 1468226032}
+      objectReference: {fileID: 0}
     - target: {fileID: 7172542272127127760, guid: 69eed2c946a18fc4baf7ae85b84f85b6, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[182]
       value: 
@@ -39015,11 +39015,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 2006620068}
---- !u!4 &5393215579111688482 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-  m_PrefabInstance: {fileID: 5393215579111688471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6786960129926904448
 GameObject:
   m_ObjectHideFlags: 0
@@ -48014,7 +48009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7219740183090079812, guid: 4d5599c0cf0150643a5ca729d9ce78f1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7219740183090079813, guid: 4d5599c0cf0150643a5ca729d9ce78f1, type: 3}
       propertyPath: m_SizeDelta.x
@@ -48035,7 +48030,11 @@ PrefabInstance:
     - target: {fileID: 7219740183687485060, guid: 4d5599c0cf0150643a5ca729d9ce78f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5393215579111688473}
+      objectReference: {fileID: 1064264630}
+    - target: {fileID: 7219740183687485060, guid: 4d5599c0cf0150643a5ca729d9ce78f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
     - target: {fileID: 7219740183750035450, guid: 4d5599c0cf0150643a5ca729d9ce78f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

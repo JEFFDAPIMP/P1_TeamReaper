@@ -16,6 +16,7 @@ TagManager:
   - Boss
   - GameMaster
   - PezGun
+  - GrappleHook
   layers:
   - Default
   - TransparentFX
