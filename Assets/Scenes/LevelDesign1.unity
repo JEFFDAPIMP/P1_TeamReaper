@@ -7678,9 +7678,9 @@ MonoBehaviour:
   fireRate1: 0.2
   burstAmount1: 3
   firemode2: 2
-  bulletPrefab2: {fileID: 6181921083931347445, guid: 024f10986bcc78749bf31be32f2bccbd, type: 3}
+  bulletPrefab2: {fileID: 8102146516850116624, guid: 89a51e260115f3448a91ad9e0ae29938, type: 3}
   bulletSpeed2: 10
-  fireRate2: 0.01
+  fireRate2: 1
   burstAmount2: 0
   maxAmmoCount: 100
   currentAmmoCount: 100
@@ -13979,10 +13979,10 @@ MonoBehaviour:
   bulletSpeed1: 10
   fireRate1: 0
   burstAmount1: 0
-  firemode2: 3
-  bulletPrefab2: {fileID: 8102146516850116624, guid: 53010cebbffc8eb4a94586cde1d1125a, type: 3}
+  firemode2: 2
+  bulletPrefab2: {fileID: 2849710076752509592, guid: 4801abcb41140a14b9597b7cb5c5efee, type: 3}
   bulletSpeed2: 10
-  fireRate2: 0
+  fireRate2: 1
   burstAmount2: 0
   maxAmmoCount: 1
   currentAmmoCount: 1
@@ -16947,7 +16947,7 @@ MonoBehaviour:
   bulletSpeed1: 15
   fireRate1: 0.1
   burstAmount1: 0
-  firemode2: 2
+  firemode2: 3
   bulletPrefab2: {fileID: 8102146516850116624, guid: 89a51e260115f3448a91ad9e0ae29938, type: 3}
   bulletSpeed2: 15
   fireRate2: 0.5
