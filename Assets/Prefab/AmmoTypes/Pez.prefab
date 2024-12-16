@@ -112,9 +112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
-  damageAmount: -2
+  damageAmount: -10
   doDamageOverTime: 0
   damageTimer: 0
+  destoryOnTriggerEnter: 1
 --- !u!54 &9161239592403073182
 Rigidbody:
   m_ObjectHideFlags: 0

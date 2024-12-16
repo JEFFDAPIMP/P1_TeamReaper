@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &932148132084298728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932148132084298729}
+  - component: {fileID: 932148132084298726}
+  - component: {fileID: 932148132084298727}
+  - component: {fileID: 932148132084298724}
+  - component: {fileID: 932148132084298725}
+  - component: {fileID: 932148132084298722}
+  m_Layer: 0
+  m_Name: GAME MASTER
+  m_TagString: GameMaster
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &932148132084298729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932148132084298728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.3802, y: 3.4995031, z: 12.375262}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &932148132084298726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932148132084298728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8526d668ea733b24c902d964a635f756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  starterAssetsInputs: {fileID: 0}
+--- !u!114 &932148132084298727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932148132084298728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df75e86089fced4fbf400477e9ad5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allCover:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  notBrokenCover: []
+--- !u!114 &932148132084298724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932148132084298728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ab47d827f21cd4aa125bcfe605a59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainTrack: 0
+  mainTrackVolume: 0.5
+  transitionClip: {fileID: 0}
+  musicTracks:
+  - {fileID: 8300000, guid: 24c4ce8ec9decfc46967c34c683af857, type: 3}
+  - {fileID: 8300000, guid: f523113427b01b844bb76657a6adb79d, type: 3}
+  monstersWithMusic: []
+  previousTime: 0
+--- !u!114 &932148132084298725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932148132084298728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0722b5db31cf6d45bb461301a63abcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: GameScene
+--- !u!114 &932148132084298722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932148132084298728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c31d022d934bf7145ac7478d6dda9b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathMenu: {fileID: 0}
+  eventSystem: {fileID: 0}
+  resetButton: {fileID: 0}
+  firstPersonController: {fileID: 0}
+  playerInventorySwitcher: {fileID: 0}
+  pauseManager: {fileID: 0}
+  playerAttack: {fileID: 0}

@@ -12,6 +12,7 @@ public class Damage : MonoBehaviour
     [SerializeField] private bool doDamageOverTime = false;
     [SerializeField] private int damageTimer = 0;
     private bool isCausingDamageOverTime = false;
+    [SerializeField] private bool destoryOnTriggerEnter = true;
 
     /// <summary>
     /// Turn the collider into a trigger when object is initialised, regardless of whether or not the script is enabled.
@@ -28,6 +29,7 @@ public class Damage : MonoBehaviour
     /// <param name="other"> the Other collider object</param>
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log("OnTriggerEnter");
         if (!doDamageOverTime)
         {
             Health health = other.gameObject.GetComponent<Health>();
@@ -35,7 +37,10 @@ public class Damage : MonoBehaviour
             {
                 health.Damage(damageAmount, damageType);
             }
-            Destroy(this.gameObject);
+            if (destoryOnTriggerEnter)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 
@@ -51,18 +56,23 @@ public class Damage : MonoBehaviour
                 //Debug.Log("FoundHealth");
                 if (!isCausingDamageOverTime)
                 {
-                    StartCoroutine(damageWithTime(damageTimer, health));
+                    StartCoroutine(DamageWithTime(damageTimer, health));
                 }
             }
         }
     }
 
-    private IEnumerator damageWithTime(int seconds, Health health)
+    private IEnumerator DamageWithTime(int seconds, Health health)
     {
         isCausingDamageOverTime = true;
         yield return new WaitForSeconds(seconds);
         //Debug.Log("IEnumerator - damageWithTime");
         health.Damage(damageAmount, damageType);
         isCausingDamageOverTime = false;
+    }
+
+    public void SetDamageType(Health.allDamageType damageType)
+    {
+        this.damageType = damageType;
     }
 }

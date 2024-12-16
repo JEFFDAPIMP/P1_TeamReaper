@@ -12,6 +12,11 @@ TagManager:
   - Wet
   - Ground
   - Target
+  - Minion
+  - Boss
+  - GameMaster
+  - PezGun
+  - GrappleHook
   layers:
   - Default
   - TransparentFX
