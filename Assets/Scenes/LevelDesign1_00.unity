@@ -7424,6 +7424,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 351639062}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -13687,6 +13691,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 351639062}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -14004,6 +14012,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 351639062}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -17778,6 +17790,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 351639062}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -27639,6 +27655,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2113620135}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -28784,6 +28804,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2113620135}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -43999,6 +44023,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 351639062}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -54221,6 +54249,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2113620135}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -61073,6 +61105,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 351639062}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -77021,6 +77057,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 351639062}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -81008,6 +81048,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 351639062}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -81416,6 +81460,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 351639062}
     m_Modifications:
+    - target: {fileID: 2090024312383724147, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
+      propertyPath: pezWeapon
+      value: 
+      objectReference: {fileID: 561391650}
     - target: {fileID: 4019090682199264334, guid: 60426053109e78c458d00d0ef5b96497, type: 3}
       propertyPath: m_RootOrder
       value: 5
