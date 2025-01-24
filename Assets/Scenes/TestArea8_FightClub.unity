@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: acf920e2e755499449a90575adbb18fc, type: 2}
 --- !u!114 &23775771 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 932148132084298725, guid: 42851746be0c6e64284a1e882f81f005, type: 3}
@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7379829299866087792, guid: 931fad1b6b0f48d4f8f7e11185efdbe7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7379829299866087793, guid: 931fad1b6b0f48d4f8f7e11185efdbe7, type: 3}
       propertyPath: m_RootOrder
@@ -372,11 +372,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7379829299866087793, guid: 931fad1b6b0f48d4f8f7e11185efdbe7, type: 3}
   m_PrefabInstance: {fileID: 140782643}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &229283845 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7219740181740961533, guid: 4d5599c0cf0150643a5ca729d9ce78f1, type: 3}
-  m_PrefabInstance: {fileID: 7219740181801346808}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &252400153
 PrefabInstance:
@@ -737,6 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Bubble Gum Gun
+  weaponAnimator: {fileID: 0}
   firemode1: 0
   bulletPrefab1: {fileID: 8102146516850116624, guid: 1ad2197e730b7f8408147194d4af82a2, type: 3}
   bulletSpeed1: 15
@@ -972,6 +968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Water Gun
+  weaponAnimator: {fileID: 0}
   firemode1: 0
   bulletPrefab1: {fileID: 8102146516850116624, guid: 80ae422edc11bb143adb8ac11f9471dc, type: 3}
   bulletSpeed1: 20
@@ -1098,6 +1095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Icing Gun
+  weaponAnimator: {fileID: 0}
   firemode1: 1
   bulletPrefab1: {fileID: 6181921083931347445, guid: 024f10986bcc78749bf31be32f2bccbd, type: 3}
   bulletSpeed1: 15
@@ -1159,6 +1157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Pez Dispensor
+  weaponAnimator: {fileID: 0}
   firemode1: 0
   bulletPrefab1: {fileID: 8102146516850116624, guid: c15935c0f3b5cc84ba9c915042edb9bc, type: 3}
   bulletSpeed1: -10
@@ -1311,6 +1310,8 @@ MonoBehaviour:
   weapon5Panel: {fileID: 1559256926}
   weapon6Panel: {fileID: 714961666}
   playerInventorySwitcher: {fileID: 135756641613574985}
+  weaponHolder: {fileID: 0}
+  PlayerWeapons: []
 --- !u!114 &573351070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1324,10 +1325,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 135756641613574990}
-  fullHealthPanel: {fileID: 1303150633}
-  halfHealthPanel: {fileID: 1296626539}
-  quarterHealthPanel: {fileID: 837000557}
-  lowHealthPanel: {fileID: 229283845}
+  fullHealthPanel: {fileID: 0}
+  hit1: {fileID: 0}
+  hit2: {fileID: 0}
+  hit3: {fileID: 0}
+  hit4: {fileID: 0}
+  hit5_dead: {fileID: 0}
 --- !u!114 &573351071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1853,11 +1856,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &837000557 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7219740182608722837, guid: 4d5599c0cf0150643a5ca729d9ce78f1, type: 3}
-  m_PrefabInstance: {fileID: 7219740181801346808}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &874605735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,6 +2181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Chomper
+  weaponAnimator: {fileID: 0}
   firemode1: 0
   bulletPrefab1: {fileID: 8102146516850116624, guid: 53010cebbffc8eb4a94586cde1d1125a, type: 3}
   bulletSpeed1: 10
@@ -2323,7 +2322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3150588907091954858, guid: 5b6033d9a6931b34b8cce1c3bcd5d886, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3943009099361012930, guid: 5b6033d9a6931b34b8cce1c3bcd5d886, type: 3}
       propertyPath: pezWeapon
@@ -2387,6 +2386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Smores Fork
+  weaponAnimator: {fileID: 0}
   firemode1: 2
   bulletPrefab1: {fileID: 3849757529109027320, guid: 2972c96ac8c424b448af693fa283c290, type: 3}
   bulletSpeed1: 15
@@ -2597,16 +2597,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288285312}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1296626539 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7219740182821131667, guid: 4d5599c0cf0150643a5ca729d9ce78f1, type: 3}
-  m_PrefabInstance: {fileID: 7219740181801346808}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1303150633 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7219740182815090385, guid: 4d5599c0cf0150643a5ca729d9ce78f1, type: 3}
-  m_PrefabInstance: {fileID: 7219740181801346808}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1409726113
 GameObject:
   m_ObjectHideFlags: 0
