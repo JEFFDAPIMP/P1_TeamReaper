@@ -23,6 +23,7 @@ public class PlayerAttack : MonoBehaviour
 
     private string animatorAttackTriggerName = "attack";
     private string animatorReloadBoolName = "reload";
+    private string playerProjectileLayerMaskName = "PlayerProjectile";
 
     /// <summary>
     /// Awake called on object is initialised, regardless of whether or not the script is enabled.
@@ -111,6 +112,7 @@ public class PlayerAttack : MonoBehaviour
     private void shootBullet(PlayerWeapon weapon, int fireInput)
     {
         GameObject bullet = Instantiate(((fireInput == 1) ? weapon.bulletPrefab1 : weapon.bulletPrefab2), bulletSpawnTransform);
+        bullet.layer = LayerMask.NameToLayer(playerProjectileLayerMaskName);
         bullet.transform.SetParent(null);
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * weapon.bulletSpeed1;
         weapon.currentAmmoCount--;

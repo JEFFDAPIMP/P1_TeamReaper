@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1527541872110659699}
   - component: {fileID: 63552527280183536}
   - component: {fileID: 237904267153042659}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6412525995517665718}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 6582298771506359305}
   - component: {fileID: 1759418525554886429}
   - component: {fileID: 2537343812630592569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3211292771440538510}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 7172542272127127758}
   - component: {fileID: 864048828000721881}
   - component: {fileID: 864048828000721880}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Spider6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -902,7 +902,7 @@ GameObject:
   - component: {fileID: 864048828089027731}
   - component: {fileID: 864048828089027732}
   - component: {fileID: 864048828089027733}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,7 +983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5224319299880084576}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg7_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 8146506715751974391}
   - component: {fileID: 7322599029307867443}
   - component: {fileID: 7975528239617914325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'CS_Angry '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1121,7 +1121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5602100416420156804}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg6_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,7 +1153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 46925911051088908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg5_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 6068459916871100234}
   - component: {fileID: 5727165225995899544}
   - component: {fileID: 7853899739409781606}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1291,7 +1291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7966339342814485056}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg5_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1323,7 +1323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1754138226724894150}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1354,7 +1354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1957847636939611079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg4_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1385,7 +1385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7875072539720673259}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg8_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1417,7 +1417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6169548263892804358}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg4_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1449,7 +1449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6009407422285199479}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg7_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1480,7 +1480,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1857517367439251692}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg3_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1514,7 +1514,7 @@ GameObject:
   - component: {fileID: 5634255104567183594}
   - component: {fileID: 4234672121847750985}
   - component: {fileID: 8858655850054515870}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1621,7 +1621,7 @@ GameObject:
   - component: {fileID: 7070638324379412698}
   - component: {fileID: 1084342091263727662}
   - component: {fileID: 3643661546012311146}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'CS_Back '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1728,7 +1728,7 @@ GameObject:
   - component: {fileID: 707012839908537285}
   - component: {fileID: 4443729596226846427}
   - component: {fileID: 7549776342223223949}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1834,7 +1834,7 @@ GameObject:
   - component: {fileID: 3190896197596351910}
   - component: {fileID: 8717444494036247038}
   - component: {fileID: 3646758156873993273}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Smile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1940,7 +1940,7 @@ GameObject:
   - component: {fileID: 1661066424815224463}
   - component: {fileID: 3958859627680383152}
   - component: {fileID: 1024258635934891459}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'CS_Chest '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2046,7 +2046,7 @@ GameObject:
   - component: {fileID: 312734069046304001}
   - component: {fileID: 2996315176345065331}
   - component: {fileID: 6943426885244233325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2151,7 +2151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7042233172027539680}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2183,7 +2183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 410328454497592629}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg6_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2214,7 +2214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2263505245411784172}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2247,7 +2247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8307380718362135421}
   - component: {fileID: 8307380718362135420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2303,7 +2303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7172542270933101272}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Shooter Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2334,7 +2334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7172542271837120724}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Shooter Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2365,7 +2365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7230407961151380747}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg8_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2398,7 +2398,7 @@ GameObject:
   - component: {fileID: 765845442600765508}
   - component: {fileID: 488957535218917464}
   - component: {fileID: 9168698643361360252}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2503,7 +2503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3659129040302742899}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Head_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2536,7 +2536,7 @@ GameObject:
   - component: {fileID: 1119392707109145565}
   - component: {fileID: 7021787162335273392}
   - component: {fileID: 5635420264818586236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2641,7 +2641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3309713509010542374}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2672,7 +2672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5896182451975803310}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2708,7 +2708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7371313556664614961}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg3_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2741,7 +2741,7 @@ GameObject:
   - component: {fileID: 7927945235257886888}
   - component: {fileID: 4344232298222250963}
   - component: {fileID: 2467754812133144882}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Leg 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2848,7 +2848,7 @@ GameObject:
   - component: {fileID: 8806206558080175687}
   - component: {fileID: 9080480331471967629}
   - component: {fileID: 9080480331471967628}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CS_Web_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
