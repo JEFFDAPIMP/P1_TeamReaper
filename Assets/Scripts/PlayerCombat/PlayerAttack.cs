@@ -111,11 +111,22 @@ public class PlayerAttack : MonoBehaviour
     /// <param name="fireInput">player input fire mode</param>
     private void shootBullet(PlayerWeapon weapon, int fireInput)
     {
-        GameObject bullet = Instantiate(((fireInput == 1) ? weapon.bulletPrefab1 : weapon.bulletPrefab2), bulletSpawnTransform);
-        bullet.layer = LayerMask.NameToLayer(playerProjectileLayerMaskName);
-        bullet.transform.SetParent(null);
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * weapon.bulletSpeed1;
-        weapon.currentAmmoCount--;
+        if(weapon.bulletPrefab1.name == "Pez")
+        {
+            //For Pez we set this gameobject as its parent, so the heal script can quickly add health to the originator of the bullet
+            GameObject bullet = Instantiate(((fireInput == 1) ? weapon.bulletPrefab1 : weapon.bulletPrefab2), bulletSpawnTransform);
+            bullet.transform.SetParent(this.gameObject.transform);
+            weapon.currentAmmoCount--;
+        }
+        else
+        {
+            GameObject bullet = Instantiate(((fireInput == 1) ? weapon.bulletPrefab1 : weapon.bulletPrefab2), bulletSpawnTransform);
+            bullet.layer = LayerMask.NameToLayer(playerProjectileLayerMaskName);
+            bullet.transform.SetParent(null);
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * weapon.bulletSpeed1;
+            weapon.currentAmmoCount--;
+        }
+
     }
 
     /// <summary>
