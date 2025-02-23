@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7551329845388527388}
   - component: {fileID: 4454110861977359596}
   - component: {fileID: 5986310904633955284}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spider2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,11 +118,15 @@ MonoBehaviour:
   x: 0
   y: -1
   z: 1
-  useParentObjectRotation: 1
-  parentObject: {fileID: 0}
-  parentx: 1
-  parenty: 1
-  parentz: 1
+  useParentObjectRotationZ: 0
+  test0: 0
+  test1: 0
+  test2: 0
+  test3: 0
+  test4: 0
+  test5: 0
+  test6: 0
+  test7: 0
 --- !u!136 &7551329845388527388
 CapsuleCollider:
   m_ObjectHideFlags: 0

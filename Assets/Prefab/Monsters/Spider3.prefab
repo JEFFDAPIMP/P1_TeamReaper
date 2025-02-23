@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7526723224924232793}
   - component: {fileID: 7526723224924232798}
   - component: {fileID: 7526723224924232799}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 7526723225171987229}
   - component: {fileID: 7526723225171987201}
   - component: {fileID: 7526723225171987200}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spider3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

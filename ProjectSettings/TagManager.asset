@@ -24,10 +24,10 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Monster
+  - PlayerProjectile
+  - MonsterProjectile
   - 
   - 
   - 
