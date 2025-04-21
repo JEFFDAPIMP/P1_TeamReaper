@@ -25,6 +25,8 @@ public class PlayerAttack : MonoBehaviour
     private string animatorReloadBoolName = "reload";
     private string playerProjectileLayerMaskName = "PlayerProjectile";
 
+    private AudioSource playerAudioSource;
+
     /// <summary>
     /// Awake called on object is initialised, regardless of whether or not the script is enabled.
     /// </summary>
@@ -32,6 +34,7 @@ public class PlayerAttack : MonoBehaviour
     {
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         inventorySwitcher = GetComponent<PlayerInventorySwitcher>();
+        playerAudioSource = GetComponent<AudioSource>();
     }
 
     /// <summary>
@@ -126,7 +129,8 @@ public class PlayerAttack : MonoBehaviour
             bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * weapon.bulletSpeed1;
             weapon.currentAmmoCount--;
         }
-
+        Debug.Log("attempting to play FX " + weapon.weaponShootFX.name);
+        playerAudioSource.PlayOneShot(weapon.weaponShootFX);
     }
 
     /// <summary>
@@ -167,6 +171,7 @@ public class PlayerAttack : MonoBehaviour
     {
         isReloading = true;
         ReloadWeaponAnimation(weapon, true);
+        playerAudioSource.PlayOneShot(weapon.weaponReloadFX);
         yield return new WaitForSeconds(weapon.reloadTime);
         weapon.currentAmmoCount = weapon.maxAmmoCount;
         ReloadWeaponAnimation(weapon, false);

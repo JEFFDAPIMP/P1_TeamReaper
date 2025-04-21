@@ -8,6 +8,7 @@ public class HealParent : MonoBehaviour
     void Start()
     {
         this.gameObject.GetComponentInParent<Health>().Damage((healAmount * -1), Health.allDamageType.Crunch);
+        this.gameObject.GetComponentInParent<Health>().playHealSoundFX();
         Destroy(this.gameObject);
     }
 }

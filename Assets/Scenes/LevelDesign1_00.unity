@@ -2512,6 +2512,42 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4070676719395173573, guid: 02ff326a8fde088448712cb7dc75fc05, type: 3}
+      propertyPath: hasSoundFXs
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070676719395173573, guid: 02ff326a8fde088448712cb7dc75fc05, type: 3}
+      propertyPath: healSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070676719395173573, guid: 02ff326a8fde088448712cb7dc75fc05, type: 3}
+      propertyPath: hurtSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070676719395173573, guid: 02ff326a8fde088448712cb7dc75fc05, type: 3}
+      propertyPath: healSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 88e86772dc68f334091e579220847224, type: 3}
+    - target: {fileID: 4070676719395173573, guid: 02ff326a8fde088448712cb7dc75fc05, type: 3}
+      propertyPath: healSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ac0d9258dc4f4042ba0fcc45b374a3c, type: 3}
+    - target: {fileID: 4070676719395173573, guid: 02ff326a8fde088448712cb7dc75fc05, type: 3}
+      propertyPath: healSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 58632ae8ff931c94593a66043e88a5a8, type: 3}
+    - target: {fileID: 4070676719395173573, guid: 02ff326a8fde088448712cb7dc75fc05, type: 3}
+      propertyPath: hurtSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 52fea38f5a008f147a2ee6736af68b86, type: 3}
+    - target: {fileID: 4070676719395173573, guid: 02ff326a8fde088448712cb7dc75fc05, type: 3}
+      propertyPath: hurtSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: c8e9432aa9d147f45bf7d3ff92c568ab, type: 3}
+    - target: {fileID: 4070676719395173573, guid: 02ff326a8fde088448712cb7dc75fc05, type: 3}
+      propertyPath: hurtSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 32fbbaacf2ce8c4468d67b1042d0c60b, type: 3}
     - target: {fileID: 4070676719395173583, guid: 02ff326a8fde088448712cb7dc75fc05, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3696,6 +3732,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &80267630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5701,6 +5739,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &116179731
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12248,6 +12288,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &261343521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17461,6 +17503,8 @@ MonoBehaviour:
   currentAmmoCount: 10
   reloadTime: 2
   canRunOut: 0
+  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
+  weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
 --- !u!1 &370076626
 GameObject:
   m_ObjectHideFlags: 0
@@ -17732,6 +17776,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &371411944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19646,6 +19692,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &410938964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21682,6 +21730,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &471022583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23397,6 +23447,8 @@ MonoBehaviour:
   currentAmmoCount: 50
   reloadTime: 1
   canRunOut: 0
+  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
+  weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
 --- !u!1 &534219371
 GameObject:
   m_ObjectHideFlags: 0
@@ -23948,6 +24000,8 @@ MonoBehaviour:
   currentAmmoCount: 100
   reloadTime: 3
   canRunOut: 0
+  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
+  weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
 --- !u!1 &547640858
 GameObject:
   m_ObjectHideFlags: 0
@@ -24783,6 +24837,8 @@ MonoBehaviour:
   currentAmmoCount: 5
   reloadTime: 0.5
   canRunOut: 1
+  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
+  weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
 --- !u!1 &567065398
 GameObject:
   m_ObjectHideFlags: 0
@@ -28964,6 +29020,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &674097241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34720,6 +34778,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &793463006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40336,6 +40396,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &916362933
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41679,6 +41741,8 @@ MonoBehaviour:
   currentAmmoCount: 1
   reloadTime: 0
   canRunOut: 0
+  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
+  weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
 --- !u!1 &945915254
 GameObject:
   m_ObjectHideFlags: 0
@@ -41853,6 +41917,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &952049743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44536,6 +44602,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1016796916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46440,6 +46508,102 @@ MonoBehaviour:
   playerAttack: {fileID: 42327082}
   playerInput: {fileID: 42327081}
   eventSystem: {fileID: 746329222}
+--- !u!82 &1064264633
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064264618}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1065133155
 GameObject:
   m_ObjectHideFlags: 0
@@ -47085,6 +47249,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1074650183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51478,7 +51644,7 @@ MonoBehaviour:
   bulletSpeed1: 15
   fireRate1: 0.1
   burstAmount1: 0
-  firemode2: 0
+  firemode2: 3
   bulletPrefab2: {fileID: 8102146516850116624, guid: 89a51e260115f3448a91ad9e0ae29938, type: 3}
   bulletSpeed2: 15
   fireRate2: 0.1
@@ -51487,6 +51653,8 @@ MonoBehaviour:
   currentAmmoCount: 100
   reloadTime: 2
   canRunOut: 0
+  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
+  weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
 --- !u!1 &1185958186
 GameObject:
   m_ObjectHideFlags: 0
@@ -52779,6 +52947,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1199927436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58016,6 +58186,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1291699153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60950,6 +61122,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1358314842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62305,6 +62479,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1386168155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64826,6 +65002,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1442728503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65028,6 +65206,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1456439880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71149,6 +71329,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1576628148
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71593,6 +71775,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1583025277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78981,6 +79165,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1770140499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79955,6 +80141,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1790774776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -81402,6 +81590,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1816871322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -82093,6 +82283,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1829169185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -83375,6 +83567,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1862764383
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -84482,6 +84676,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1880849213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87690,6 +87886,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1926605076
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88816,6 +89014,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1953188644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89589,6 +89789,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &1972757862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94770,6 +94972,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &2083481906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96145,6 +96349,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!65 &2104408494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98445,6 +98651,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!1001 &932148132094376446
 PrefabInstance:
   m_ObjectHideFlags: 0
