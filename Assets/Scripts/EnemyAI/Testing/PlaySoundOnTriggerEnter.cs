@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent (typeof(AudioSource))]
 public class PlaySoundOnTriggerEnter : MonoBehaviour
 {
-    public GameObject Target;
+    //public GameObject Target;
     public AudioClip[] audioClips;
     private AudioSource audioSource;
 

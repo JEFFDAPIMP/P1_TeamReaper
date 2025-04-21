@@ -171,7 +171,10 @@ public class PlayerAttack : MonoBehaviour
     {
         isReloading = true;
         ReloadWeaponAnimation(weapon, true);
-        playerAudioSource.PlayOneShot(weapon.weaponReloadFX);
+        if (weapon.weaponReloadFX != null)
+        {
+            playerAudioSource.PlayOneShot(weapon.weaponReloadFX);
+        }
         yield return new WaitForSeconds(weapon.reloadTime);
         weapon.currentAmmoCount = weapon.maxAmmoCount;
         ReloadWeaponAnimation(weapon, false);

@@ -17503,8 +17503,8 @@ MonoBehaviour:
   currentAmmoCount: 10
   reloadTime: 2
   canRunOut: 0
-  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
-  weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
+  weaponShootFX: {fileID: 8300000, guid: b748090f7a21c904da6f1e13d9859877, type: 3}
+  weaponReloadFX: {fileID: 8300000, guid: b9ddf866a94e93e49a0f150876577f80, type: 3}
 --- !u!1 &370076626
 GameObject:
   m_ObjectHideFlags: 0
@@ -23447,8 +23447,8 @@ MonoBehaviour:
   currentAmmoCount: 50
   reloadTime: 1
   canRunOut: 0
-  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
-  weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
+  weaponShootFX: {fileID: 8300000, guid: e688a5a06120e0f40825dbcb00775bff, type: 3}
+  weaponReloadFX: {fileID: 8300000, guid: 79297c520f0d5384abc10bda85014361, type: 3}
 --- !u!1 &534219371
 GameObject:
   m_ObjectHideFlags: 0
@@ -23991,17 +23991,17 @@ MonoBehaviour:
   bulletSpeed1: 15
   fireRate1: 0.2
   burstAmount1: 3
-  firemode2: 2
-  bulletPrefab2: {fileID: 6181921083931347445, guid: 024f10986bcc78749bf31be32f2bccbd, type: 3}
+  firemode2: 0
+  bulletPrefab2: {fileID: 8102146516850116624, guid: 89a51e260115f3448a91ad9e0ae29938, type: 3}
   bulletSpeed2: 10
-  fireRate2: 0.01
+  fireRate2: 0
   burstAmount2: 0
   maxAmmoCount: 100
   currentAmmoCount: 100
   reloadTime: 3
   canRunOut: 0
-  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
-  weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
+  weaponShootFX: {fileID: 8300000, guid: bc18be0459beb7542ab26bdd8bc59c86, type: 3}
+  weaponReloadFX: {fileID: 8300000, guid: 78fbe467ea6af9849a300e6481bd1e6d, type: 3}
 --- !u!1 &547640858
 GameObject:
   m_ObjectHideFlags: 0
@@ -24837,7 +24837,7 @@ MonoBehaviour:
   currentAmmoCount: 5
   reloadTime: 0.5
   canRunOut: 1
-  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
+  weaponShootFX: {fileID: 8300000, guid: 203aada6c04ca0f41b931345d1c9a7f5, type: 3}
   weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
 --- !u!1 &567065398
 GameObject:
@@ -41741,8 +41741,8 @@ MonoBehaviour:
   currentAmmoCount: 1
   reloadTime: 0
   canRunOut: 0
-  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
-  weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
+  weaponShootFX: {fileID: 8300000, guid: 63a618ff64d7f744698e2961867dd2b9, type: 3}
+  weaponReloadFX: {fileID: 0}
 --- !u!1 &945915254
 GameObject:
   m_ObjectHideFlags: 0
@@ -51653,8 +51653,8 @@ MonoBehaviour:
   currentAmmoCount: 100
   reloadTime: 2
   canRunOut: 0
-  weaponShootFX: {fileID: 8300000, guid: ed2141da46605464fb618a5015f32b5b, type: 3}
-  weaponReloadFX: {fileID: 8300000, guid: 55ec536720e49244ea8c97e08c3ba5e6, type: 3}
+  weaponShootFX: {fileID: 8300000, guid: f38494c50fd4df54e9dc8111e99b597f, type: 3}
+  weaponReloadFX: {fileID: 8300000, guid: 9ed58aae531a12042b5d456bd86a51b7, type: 3}
 --- !u!1 &1185958186
 GameObject:
   m_ObjectHideFlags: 0

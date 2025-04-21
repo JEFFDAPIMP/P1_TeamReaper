@@ -175,6 +175,8 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds: []
+  healSounds: []
 --- !u!114 &1551973084205555191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe912da0bf837545a294ee9d18bc5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 2ae283ecf9efd184f93e9446d089f45c, type: 3}
+  audioClip: {fileID: 8300000, guid: 1689ab4e4e1637b48bc3c6c27345ca8d, type: 3}
 --- !u!82 &3728724056597564888
 AudioSource:
   m_ObjectHideFlags: 0
@@ -209,9 +211,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 2
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0

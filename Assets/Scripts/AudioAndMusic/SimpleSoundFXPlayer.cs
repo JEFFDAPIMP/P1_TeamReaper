@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // This can be added to objects that only need to loop one sound effect, example would be the fire wall
