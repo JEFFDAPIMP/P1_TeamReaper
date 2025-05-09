@@ -36,6 +36,7 @@ public class Damage : MonoBehaviour
             if (health != null)
             {
                 health.Damage(damageAmount, damageType);
+                health.playHurtSoundFX();
             }
             if (destoryOnTriggerEnter)
             {
@@ -68,6 +69,7 @@ public class Damage : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         //Debug.Log("IEnumerator - damageWithTime");
         health.Damage(damageAmount, damageType);
+        health.playHurtSoundFX();
         isCausingDamageOverTime = false;
     }
 

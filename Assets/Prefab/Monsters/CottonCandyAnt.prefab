@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8610104696276829140}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ChompPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2334523170900094489}
   - component: {fileID: 2334523170900094490}
   - component: {fileID: 2334523170900094491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 2334523170963259486}
   - component: {fileID: 2334523170963259483}
   - component: {fileID: 2334523170963259480}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 2334523171170473668}
   - component: {fileID: 2334523171170473665}
   - component: {fileID: 2334523171170473670}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 2334523171322853654}
   - component: {fileID: 2334523171322853651}
   - component: {fileID: 2334523171322853648}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 2334523171374860245}
   - component: {fileID: 2334523171374860246}
   - component: {fileID: 2334523171374860247}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2334523171408348205}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 2334523171457813722}
   - component: {fileID: 2334523171457813703}
   - component: {fileID: 2334523171457813700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2334523171630605899}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Antena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 2334523171685385349}
   - component: {fileID: 2334523171685385350}
   - component: {fileID: 2334523171685385351}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 2334523171782569143}
   - component: {fileID: 2334523171782569136}
   - component: {fileID: 2334523171782569137}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2334523171884010007}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leg (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 2334523171914566348}
   - component: {fileID: 2334523171914566345}
   - component: {fileID: 2334523171914566350}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 2334523172096895002}
   - component: {fileID: 2334523172096894983}
   - component: {fileID: 2334523172096894980}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2334523172112149308}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1006,7 +1006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2334523172232279815}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,7 +1040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2334523172234716713}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leg (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 2334523172246500354}
   - component: {fileID: 2334523172246500367}
   - component: {fileID: 2334523172246500364}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1161,7 +1161,8 @@ GameObject:
   - component: {fileID: 2904999896016388864}
   - component: {fileID: 2998372159180400806}
   - component: {fileID: 8853240147384841171}
-  m_Layer: 0
+  - component: {fileID: 193798155258671847}
+  m_Layer: 7
   m_Name: CottonCandyAnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1247,6 +1248,13 @@ MonoBehaviour:
   makeTriggerOnDeath: 0
   firstPersonController: {fileID: 0}
   enemyBase: {fileID: 0}
+  hurtSounds:
+  - {fileID: 8300000, guid: 2ae283ecf9efd184f93e9446d089f45c, type: 3}
+  - {fileID: 8300000, guid: 52fea38f5a008f147a2ee6736af68b86, type: 3}
+  - {fileID: 8300000, guid: f626842110256bd4aa533e25c8663b9b, type: 3}
+  - {fileID: 8300000, guid: c8e9432aa9d147f45bf7d3ff92c568ab, type: 3}
+  - {fileID: 8300000, guid: 32fbbaacf2ce8c4468d67b1042d0c60b, type: 3}
+  healSounds: []
 --- !u!114 &2998372159180400806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1289,6 +1297,102 @@ MonoBehaviour:
   chompPoint: {fileID: 8610104696276829140}
   projectileSpeed: 2
   chompCooldown: 1
+--- !u!82 &193798155258671847
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334523172289519513}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2334523172469029246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2334523172469029241}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leg (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1437,7 @@ GameObject:
   - component: {fileID: 2334523172503552170}
   - component: {fileID: 2334523172503552215}
   - component: {fileID: 2334523172503552212}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1416,7 +1520,7 @@ GameObject:
   - component: {fileID: 2334523172511036909}
   - component: {fileID: 2334523172511036910}
   - component: {fileID: 2334523172511036911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1499,7 +1603,7 @@ GameObject:
   - component: {fileID: 2334523172593394646}
   - component: {fileID: 2334523172593394643}
   - component: {fileID: 2334523172593394640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1582,7 +1686,7 @@ GameObject:
   - component: {fileID: 2334523172798157877}
   - component: {fileID: 2334523172798157878}
   - component: {fileID: 2334523172798157879}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1665,7 +1769,7 @@ GameObject:
   - component: {fileID: 2334523172815510415}
   - component: {fileID: 2334523172815510408}
   - component: {fileID: 2334523172815510409}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1748,7 +1852,7 @@ GameObject:
   - component: {fileID: 2334523172833856650}
   - component: {fileID: 2334523172833856695}
   - component: {fileID: 2334523172833856692}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1829,7 +1933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2334523172883698240}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leg (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1862,7 +1966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2334523172905901698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leg (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

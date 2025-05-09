@@ -23,6 +23,9 @@ public class PlayerAttack : MonoBehaviour
 
     private string animatorAttackTriggerName = "attack";
     private string animatorReloadBoolName = "reload";
+    private string playerProjectileLayerMaskName = "PlayerProjectile";
+
+    private AudioSource playerAudioSource;
 
     /// <summary>
     /// Awake called on object is initialised, regardless of whether or not the script is enabled.
@@ -31,6 +34,7 @@ public class PlayerAttack : MonoBehaviour
     {
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         inventorySwitcher = GetComponent<PlayerInventorySwitcher>();
+        playerAudioSource = GetComponent<AudioSource>();
     }
 
     /// <summary>
@@ -110,10 +114,23 @@ public class PlayerAttack : MonoBehaviour
     /// <param name="fireInput">player input fire mode</param>
     private void shootBullet(PlayerWeapon weapon, int fireInput)
     {
-        GameObject bullet = Instantiate(((fireInput == 1) ? weapon.bulletPrefab1 : weapon.bulletPrefab2), bulletSpawnTransform);
-        bullet.transform.SetParent(null);
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * weapon.bulletSpeed1;
-        weapon.currentAmmoCount--;
+        if(weapon.bulletPrefab1.name == "Pez")
+        {
+            //For Pez we set this gameobject as its parent, so the heal script can quickly add health to the originator of the bullet
+            GameObject bullet = Instantiate(((fireInput == 1) ? weapon.bulletPrefab1 : weapon.bulletPrefab2), bulletSpawnTransform);
+            bullet.transform.SetParent(this.gameObject.transform);
+            weapon.currentAmmoCount--;
+        }
+        else
+        {
+            GameObject bullet = Instantiate(((fireInput == 1) ? weapon.bulletPrefab1 : weapon.bulletPrefab2), bulletSpawnTransform);
+            bullet.layer = LayerMask.NameToLayer(playerProjectileLayerMaskName);
+            bullet.transform.SetParent(null);
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * weapon.bulletSpeed1;
+            weapon.currentAmmoCount--;
+        }
+        Debug.Log("attempting to play FX " + weapon.weaponShootFX.name);
+        playerAudioSource.PlayOneShot(weapon.weaponShootFX);
     }
 
     /// <summary>
@@ -154,6 +171,10 @@ public class PlayerAttack : MonoBehaviour
     {
         isReloading = true;
         ReloadWeaponAnimation(weapon, true);
+        if (weapon.weaponReloadFX != null)
+        {
+            playerAudioSource.PlayOneShot(weapon.weaponReloadFX);
+        }
         yield return new WaitForSeconds(weapon.reloadTime);
         weapon.currentAmmoCount = weapon.maxAmmoCount;
         ReloadWeaponAnimation(weapon, false);

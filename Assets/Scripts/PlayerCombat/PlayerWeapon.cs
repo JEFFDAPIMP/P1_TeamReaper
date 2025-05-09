@@ -32,4 +32,8 @@ public class PlayerWeapon : MonoBehaviour
     public int currentAmmoCount;
     public float reloadTime;
     public bool canRunOut = false;
+
+    [Header("Weapon values for soundFXs")]
+    public AudioClip weaponShootFX;
+    public AudioClip weaponReloadFX;
 }

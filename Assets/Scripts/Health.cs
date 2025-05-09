@@ -36,6 +36,11 @@ public class Health : MonoBehaviour
 
     private float deathDelay = 0.25f;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip[] hurtSounds;
+    [SerializeField] private AudioClip[] healSounds;
+
+
     private void Start()
     {
         enemyBase = GetComponent<EnemyBase>();
@@ -45,6 +50,11 @@ public class Health : MonoBehaviour
             handlePlayerDeath = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<HandlePlayerDeath>();
         }
         health = maxHealth;
+
+        if (hurtSounds.Length > 0 || healSounds.Length > 0)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     /// <summary>
@@ -76,6 +86,24 @@ public class Health : MonoBehaviour
         }
         ApplyStatusEffects(damageType);
         StartCoroutine(CheckDeath(deathDelay));
+    }
+
+    public void playHurtSoundFX()
+    {
+        if (hurtSounds.Length > 0)
+        {
+            //get random hurt sound from array and then play it
+            audioSource.PlayOneShot(hurtSounds[Random.Range(0, hurtSounds.Length - 1)]);
+        }
+    }
+
+    public void playHealSoundFX()
+    {
+        if (healSounds.Length > 0)
+        {
+            //get random heal sound from array and then play it
+            audioSource.PlayOneShot(healSounds[Random.Range(0, healSounds.Length - 1)]);
+        }
     }
 
     /// <summary>

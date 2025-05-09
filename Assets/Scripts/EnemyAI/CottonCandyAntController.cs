@@ -27,6 +27,7 @@ public class CottonCandyAntController : MonoBehaviour
     [SerializeField] private float projectileSpeed;
     private float nextChompTime;
     [SerializeField] private float chompCooldown = 1.0f;
+    private string monsterProjectileLayerMaskName = "MonsterProjectile";
 
     // Start is called before the first frame update
     void Start()
@@ -154,6 +155,7 @@ public class CottonCandyAntController : MonoBehaviour
         //LookAtTarget();
 
         GameObject chomp = Instantiate(chompPrefab, chompPoint.position, Quaternion.identity);
+        chomp.layer = LayerMask.NameToLayer(monsterProjectileLayerMaskName);
         Vector3 direction = (playerTransform.position - transform.position).normalized;
         chomp.GetComponent<Rigidbody>().velocity = direction * projectileSpeed;
     }
